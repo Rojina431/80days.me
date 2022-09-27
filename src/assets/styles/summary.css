@@ -1,0 +1,160 @@
+
+
+.summary-container{
+    background-color: var(--white-color);
+    display: flex;
+    border-radius: 10px;
+}
+
+/*left*/
+.summary-left-cont{
+    padding:7px 0 0 20px;
+}
+
+.summary-date{
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+
+.summary-route{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.lower{
+    padding: 10px 0;
+    position: relative;
+}
+
+.airport{
+    font-size: 10px;
+    color: var(--grey-color);
+    font-weight: 400;
+    min-height: 36px;
+    letter-spacing: .3px;
+}
+
+.aircode{
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: -8px;
+    line-height: 1.25;
+}
+
+.timed{
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.duration{
+    position: relative;
+}
+
+.total-time{
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--grey-color);
+    border-bottom: 1px solid var(--grey-color);
+    margin-left: -35px;
+    margin-right: 25px;
+    margin-top: 35px;
+    text-align: center;
+    line-height: 1;
+    /* position: absolute; */
+    padding-bottom: 5px;
+}
+
+.total-time::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 6px;
+    height: 0;
+    border-top: 1px solid #b6b6bc;
+    margin-right: 22px;
+    right: 0;
+    bottom:18px;
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    padding-right: 15px;
+}
+
+
+/*right*/
+
+.sum-right{
+    position: relative;
+}
+
+.summary-right-cont{
+    border-left: 1px dashed #ebebee;
+    padding: 0 20px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.summary-right-cont::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: rgba(0,0,0,.09);
+    right: 0;
+    top: 49px;
+    border-radius: 3px 0 0 3px;
+}
+
+.airplane-icon{
+    margin: 25px 0 10px 5px;
+    max-width: 18px;
+    min-height: 18px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.airname{
+    font-size: 10px;
+    text-align: center;
+    font-weight: 600;
+    margin: 15px 0;
+    line-height: 11px;
+}
+
+.air-code{
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--grey-color);
+    line-height: 1.2;
+    min-height: 32px;
+    text-align: center;
+}
+
+/**/
+.from-city{
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 1.03;
+}
+
+.stay{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--grey-color);
+}
+
+/**/
+
+.path-curve{
+    height: 190px;
+    width: 120px;
+    border-radius: 50%;
+    border-left: 2px solid;
+    border-top: 2px solid transparent!important;
+    border-bottom: 2px solid transparent!important;
+    z-index: 1;
+    position: absolute;
+}

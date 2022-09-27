@@ -1,0 +1,96 @@
+@import url('./constant.css');
+
+.traveller-icon{
+    width: 40px;
+    height: 40px;
+    background-color: var(--parrot-color);
+    color: var(--white-color);
+    text-align: center;
+    border-radius: 100%;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.modal-dialog{
+    max-width: 340px !important;
+}
+
+.content{
+    padding: 20px 10px 5px 25px
+}
+
+.booked-date{
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--grey-third);
+}
+
+.booking-main{
+    border: 1px solid var(--grey-fourth);
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.booking-desc{
+    padding: 10px;
+    padding-left: 15px;
+}
+
+.dates{
+    font-size: 10px;
+    font-weight:400;
+}
+
+.dates.saved{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.country-dest{
+  font-size: 14px;
+  font-weight:700;
+}
+
+.country-dest.history{
+    margin-top: -5px;
+}
+
+
+.routes{
+    font-size: 10px;
+    font-weight:400;
+    color:#757575;
+}
+
+.routes{
+    line-height: 1.4;
+}
+
+.price{
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.btn-booked{
+    position: relative;
+}
+
+.open-btn{
+    color: var(--white-color);
+    text-transform: uppercase;
+    background-color: var(--green-color);
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: 0px;
+    height: 26px;
+    width: 50px;
+    position: absolute;
+    bottom: 12px;
+}
+

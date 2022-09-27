@@ -1,0 +1,117 @@
+@import url('./constant.css');
+
+.home{
+    background-image: url('../images/map.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+
+  .login-whole{
+    background-image: url('../images/map1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }
+  
+  .main-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 340px;
+  }
+
+.btn-green{
+    width: 100%;
+    color: var(--white-color);
+    text-transform: uppercase;
+    background-color: var(--green-color);
+    text-align: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 10px;
+    height: 46px;
+    border: 0px;
+}
+
+.no-underline>a{
+    text-decoration: none !important;
+}
+
+a{
+    text-decoration: underline;
+}
+
+.form-check-input{
+    width: 1.6em;
+    height: 1.6em;
+}
+
+.form-check-input:checked{
+    background-color: var(--green-color);
+    border: 0px;
+}
+
+/* .form-select{
+    border: 0px;
+    background-image: none;
+} */
+
+.form-select{
+    background-image: none;
+}
+
+
+.row{
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    margin: 0px !important;
+}
+
+.nav-link{
+    border: 0px !important;
+    border-bottom: 1px solid var(--grey-next) !important;
+    color: var(--grey-color) !important;
+}
+
+.nav-link.active{
+    color: black !important;
+    border-bottom: 2px solid black !important;
+}
+
+.nav-item{
+    font-size: 15px !important;
+}
+
+.modal-body{
+    padding: 0px !important;
+}
+
+
+.dash{
+    height: 3px !important;
+    width: 2px;
+    margin-left: 6px;
+    margin-bottom: 5px;
+}
+
+.row>*{
+padding: 0px;
+}
+
+.circle-pay{
+    width: 40px;
+    height: 40px;
+    color: var(--white-color);
+    border-radius: 100%;
+    border: 3px solid var(--white-color);
+    text-align: center;
+    line-height: .81;
+    font-weight: 700;
+    font-size: 14px;
+    padding-top:5px;
+}

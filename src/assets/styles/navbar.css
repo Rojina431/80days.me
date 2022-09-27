@@ -1,0 +1,74 @@
+@import url('../styles/constant.css');
+
+.navbar{
+    padding:0 20px;
+    position: relative;
+}
+
+.left-logo{
+    width: 300px;
+}
+
+.nav-brand{
+    display: flex;
+    font-family: Futura;
+}
+
+.left-logo img{
+    padding-top: 20px;
+}
+
+.left-logo span {
+    padding-top: 28px;
+    margin-left: 35px;
+}
+
+
+.right-links{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+}
+
+.each-links{
+    margin-right: 18px;
+    margin-left: 18px;
+    display: inline-block;
+}
+
+.global-logo{
+    margin-right: 8px;
+    margin-top: -3px;
+}
+
+.circle{
+    width: 32px;
+    height: 32px;
+    color: var(--white-color);
+    border-radius: 100%;
+    border: 3px solid var(--white-color);
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+}
+
+
+
+@media (min-width:0px) and (max-width:780px) {
+    .left-logo{
+        width: fit-content;
+    }
+
+    .left-logo span{
+        display: none;
+    }
+}
+
+@media (min-width:0px) and (max-width:710px) {
+
+   .each-links-text{
+    display: none;
+   }
+}

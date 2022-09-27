@@ -1,0 +1,16 @@
+:root{
+    --black-color:#303030;
+    --black-second: #4a4a4a;
+    --purple-color:rgb(128, 76, 180);
+    --white-color:#fff;
+    --blue-color: #1890ff;
+    --green-color: #4bd963;
+    --light-green-color: #74e787;
+    --parrot-color: rgb(159, 180, 20);
+    --grey-color: #b6b6bc;
+    --grey-next: #dee2e6; 
+    --grey-third: #6d6d72;
+    --grey-fourth: #ededed;
+    --grey-fifth: #ccc;
+    --grey-sixth: #f3f3f3;
+}

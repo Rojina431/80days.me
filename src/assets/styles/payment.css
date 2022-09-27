@@ -1,0 +1,102 @@
+.payment-comp{
+    background-color: #efefef;
+}
+
+.route-line{
+    margin: 30px 70px 40px;
+    font-size: 20px;
+}
+
+.pay-body{
+    display: flex;
+}
+
+.payment-form{
+    width: 70%;
+}
+
+.total-estimate-payment{
+    width: 30%;
+    padding-left: 40px;
+    position: fixed;
+    right: 0;
+    padding-right: 10px;
+}
+
+.pay-body.row>*{
+    padding: 0px !important;
+}
+
+.payment-form{
+    border: 1px solid var(--grey-color);
+    border-radius: 8px;
+    margin:0 10px;
+}
+
+.header-outer, .head-outer-first{
+    margin: 10px 0;
+}
+
+.head-outer{
+  border-bottom: 1px solid var(--grey-color);
+  border-top: 1px solid var(--grey-color);
+}
+
+.head-outer-first{
+    border-bottom: 1px solid var(--grey-color);
+    padding: 0px !important;
+}
+
+.head-inner{
+    display: flex;
+    position: relative;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.left-text{
+    position: absolute;
+    right: 30px;
+    color: var(--grey-color);
+}
+
+.sno{
+    width: 20px;
+    line-height: 20px;
+    background-color: black;
+    color: var(--white-color);
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.body-container{
+    padding: 20px 30px;
+}
+
+.form-cont .form-select{
+    font-size: 14px !important;
+}
+
+.form-cont .form-control{
+    font-size: 14px !important;
+}
+
+.phone{
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+}
+
+.phone.form-control{
+    height: 28px !important;
+}
+
+.body-container .form-control:focus{
+    box-shadow: 0px 0px red !important;
+    border: 1px solid black;
+}
+
+.body-container .form-select:focus{
+    border: 1px solid black;
+}

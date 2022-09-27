@@ -1,0 +1,133 @@
+.login-signup-btn{
+    border:0px;
+    height: 46px;
+    width: 340px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.signup, .login{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    width: 50%;
+    text-transform: uppercase;
+    padding-top:12px;
+    cursor: pointer;
+}
+
+.login{
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.signup{
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.login-signup-btn .active{
+    color: black;
+    background-color: var(--white-color);
+}
+
+.login-signup-btn .not-active{
+    color: var(--grey-fifth);
+    background-color: var(--grey-sixth);
+}
+
+.main-container{
+    background-color: var(--white-color);
+    border: 0px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.btn-signup-login{
+    margin: 10px 0;
+}
+
+.each-field{
+    height: 55px;
+    font-size: 14px;
+    color: var(--black-second);
+}
+
+.each-field-border{
+    border-bottom: 1px solid #ebebee;
+}
+
+
+.each-form-field>input{
+    padding: 10px;
+    width: 96%;
+    border: 0px;
+    text-align: center;
+    line-height: 34px;
+    outline: none;
+}
+
+input:active{
+    border: 0px !important;
+}
+
+
+
+.custom-select .form-select-lg{
+    font-size: 14px;
+    padding: 10px !important;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--black-second);
+    background-image: none;
+}
+
+.form-select:focus{
+    box-shadow: 0px 0px red;
+}
+
+.footer-login{
+    text-align: center;
+}
+
+.agreement{
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.privacy{
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.btn-signup-login>button{
+  font-size: 16px;
+}
+
+.btn-signup-login>button:hover{
+    color: white !important;
+}
+
+/*login*/
+.forget{
+    cursor: pointer;
+    font-weight: 500;
+    color: #a3a0a0;
+    font-size: 14px;
+    letter-spacing: .3px;
+    padding-bottom: 30px;
+}
+
+.guest{
+    line-height: 30px;
+    font-weight: 300;    
+    font-size: 14px;
+}  
+
+.guest>a{
+    color: var(--grey-color);
+}
+
+.guest>a:hover{
+  text-decoration: underline;
+}

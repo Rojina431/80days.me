@@ -1,0 +1,128 @@
+.home-title{
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    text-align: center !important;
+    margin: 0 0.6em;
+}
+
+.user-select{
+    float: right;
+    display: flex;
+}
+
+.drop-select{
+    position: absolute;
+    left: 300px;
+    background-color: var(--white-color);
+    border: 1px solid var(--black-color);   
+    width: 151px;
+    z-index: 1;
+    top: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;}
+
+.drop-select div{
+    padding-left: 60px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.drop-select div:hover{
+  background-color: var(--blue-color);
+}
+
+
+.form-field{
+    position: absolute;
+    top:5px;
+    width: 340px;
+    background-color: var(--white-color);
+ 
+    border-radius: 10px;
+}
+
+.each-field, .no-padding-each{
+    height: 51px;
+    font-size: 14px;
+    display: flex;
+}
+
+.each-field-varh{
+    font-size: 14px;
+    display: flex;
+}
+
+.no-padding-each{
+    padding-left: 10px;
+}
+
+.each-field, .each-field-varh{
+    padding: 10px 0 15px 10px;
+}
+
+
+
+._10percent-field{
+    width: 15%;
+    color: var(--grey-color);
+}
+
+
+._10percent-field-icon{
+    width: 10%;
+    color: var(--grey-color);
+    margin-top: 3px;
+}
+
+._10percent-field-check{
+    width: 10%;
+    color: var(--grey-color);
+}
+
+.border-field, .border-field-one{
+    width: 90%;
+    border-bottom: 0.01rem solid var(--grey-color);
+}
+
+.border-field{
+    display: flex;
+}
+
+.select-drop{
+    width: 90%;
+    text-align: right;
+}
+
+.select-drop .form-select{
+    font-weight: 700;
+    font-size: 14px;
+    text-align: right;
+    height: 100%;
+    margin-right: 0px !important;
+    padding-right: 5px;
+}
+
+.select-drop.ant-select-selection-search{
+    width: 260px;
+}
+
+.ant-select{
+    display: block;
+}
+
+.select-drop.ant-picker-input input{
+    font-weight: 700 !important;
+}
+
+.shadow-field{
+    -webkit-box-shadow: inset 0 8px 20px 0 rgb(0 0 0 / 5%);
+    box-shadow: inset 0 8px 20px 0 rgb(0 0 0 / 5%);
+}
+
+.bottom-btn{
+    position: absolute;
+    bottom: 0px;
+    width: 340px;
+}
+
+
+
