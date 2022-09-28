@@ -1,9 +1,10 @@
 .payment-comp{
     background-color: #efefef;
+    padding-top: 100px;
 }
 
 .route-line{
-    margin: 30px 70px 40px;
+    margin: 0 70px 40px;
     font-size: 20px;
 }
 
@@ -63,13 +64,18 @@
 }
 
 .sno{
-    width: 20px;
-    line-height: 20px;
+    width: 30px;
+    line-height: 28px;
     background-color: black;
     color: var(--white-color);
     margin-right: 10px;
     text-align: center;
     border-radius: 50%;
+}
+
+.form-head{
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .body-container{
@@ -99,4 +105,24 @@
 
 .body-container .form-select:focus{
     border: 1px solid black;
+}
+
+@media (min-width:0px) and (max-width:800px) {
+   .pay-body{
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+   }    
+
+   .payment-form{
+    width: 100%;
+    margin:0;
+    margin-bottom: 10px;
+   }
+
+   .total-estimate-payment{
+    width: 100%;
+    position: static;
+    padding: 0 30px;
+   }
 }

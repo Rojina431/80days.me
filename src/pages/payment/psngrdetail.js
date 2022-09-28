@@ -14,6 +14,9 @@ const PessengerInfo = (props) => {
 
     const [firstCheck, setFirstCheck] = useState(false)
     const [secondCheck, setSecondCheck] = useState(false)
+    const [firstHover, setFirstHover] = useState(false)
+    const [secondHover, setSecondHover] = useState(false)
+    const [thirdHover, setThirdHover] = useState(false)
 
     useEffect(()=> {
         props.handleChange(firstCheck, secondCheck)
@@ -30,6 +33,24 @@ const PessengerInfo = (props) => {
     const handleSecond = () => {
         setSecondCheck(!secondCheck)
     }
+
+    const handleHover1=() => {
+      setFirstHover(true)
+  }
+
+  const handleHover2 = () => {
+      setSecondHover(true)
+  }
+
+  const handleHover3 = () => {
+   setThirdHover(true)
+}
+
+const handleHoverOut = () => {
+   setFirstHover(false)
+   setSecondHover(false)
+   setThirdHover(false)
+}
 
    return (
       <Fragment>
@@ -116,17 +137,38 @@ const PessengerInfo = (props) => {
                    handleCheck={handleClick}
                    img={bag}
                    text="free"
-                   icon={<BsCheck2 style={{color:"#b6b6bc"}}/>}/>
+                   open={firstHover}
+                   handleHover={handleHover1}
+                   handleHoverOut={handleHoverOut}
+                   icon={<BsCheck2 style={{color:"#b6b6bc"}}
+                   />}
+                   para1="Personal item is free."
+                   para2="Personal items include bag, camera, phone."
+                   para3="It must not exceeds 40*40*25 cm size, 5kg."
+                   />
                    <PopoverButton
                    handleCheck={handleFirst}
                    img={luggage}
                    text="2980 ₽"
-                   icon={firstCheck ? <BsCheck2 style={{color:"#4bd963"}} size={20}/> : <GoPlus/>}/>
+                   open={secondHover}
+                   handleHover={handleHover2}
+                   handleHoverOut={handleHoverOut}
+                   icon={firstCheck ? 
+                   <BsCheck2 style={{color:"#4bd963"}} size={20}/> : <GoPlus/>}
+                   para1="1 Cabin bag costs 2980 ₽."
+                   para2="Personal items include bag, camera, phone."
+                   para3="It must not exceeds 55 x 20 x 40 сm, 10 kg"/>
                    <PopoverButton
                    handleCheck={handleSecond}
                    img={trolly}
                    text="8841 ₽"
-                   icon={secondCheck ? <BsCheck2 style={{color:"#4bd963"}} size={20}/> : <GoPlus/>}/>
+                   open={thirdHover}
+                   handleHover={handleHover3}
+                   handleHoverOut={handleHoverOut}
+                   icon={secondCheck ? 
+                   <BsCheck2 style={{color:"#4bd963"}} size={20}/> : <GoPlus/>}
+                   para1="1 Check-in bag costs 8841 ₽."
+                   para3="It must not exceeds 158 сm, 20 kg"/>
               </div>
             </div>
             <button className='btn-pay'>Add Passenger</button>

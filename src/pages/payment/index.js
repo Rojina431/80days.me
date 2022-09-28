@@ -4,6 +4,7 @@ import { BookedAdventureDetails } from '../../assets/constants/adventuredetails'
 import '../../assets/styles/payment.css'
 import HeaderPayment from '../../component/header3'
 import ContactDetails from './contact'
+import PayProcess from './payprocess'
 import PessengerInfo from './psngrdetail'
 import TripSummary from './summary'
 import TotalPaymentComp from './totalpayment'
@@ -40,6 +41,7 @@ const PaymentPage = () => {
                  <TripSummary/>
                  <PessengerInfo handleChange={handleChange}/>
                  <ContactDetails/>
+                 <PayProcess/>
                </div>
                <div className='total-estimate-payment'>
                 <TotalPaymentComp 

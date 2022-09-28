@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+
 const PaymentFormHeader = (props) => {
     return(
         <div className={props.class}>
@@ -9,7 +11,12 @@ const PaymentFormHeader = (props) => {
             {props.formHead}
            </div>
            {props.leftText !== "" &&
-           <div className="left-text">
+           props.isImage ? 
+           <div style={{position:"absolute", right:"30px"}}>
+           <img src={props.leftText}  height="40px" style={{marginTop:"-5px"}}/>
+           <img src={props.img2} height="30px" style={{marginTop:"-5px"}}/>
+           </div>
+            : <div className="left-text">
               {props.leftText}
            </div>
            }

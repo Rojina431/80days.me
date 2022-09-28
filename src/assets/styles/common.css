@@ -5,7 +5,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    height: 110vh;
   }
 
   .login-whole{
@@ -18,7 +18,7 @@
   
   .main-center{
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 340px;
@@ -56,10 +56,17 @@ a{
     border: 0px;
 }
 
-/* .form-select{
+ .login-select .form-select{
     border: 0px;
-    background-image: none;
-} */
+} 
+
+.login-select{
+    position: relative;
+}
+
+.login-select .custom-select .form-select-lg{
+    color: black !important;
+}
 
 .form-select{
     background-image: none;
@@ -114,4 +121,17 @@ padding: 0px;
     font-weight: 700;
     font-size: 14px;
     padding-top:5px;
+}
+
+.css-1hb7zxy-IndicatorsContainer{
+    display: none !important;
+}
+
+.css-1rhbuit-multiValue{
+    background-color: var(--green-color) !important;
+    color: var(--white-color) !important;
+}
+
+.css-12jo7m5 {
+    color: var(--white-color) !important;
 }

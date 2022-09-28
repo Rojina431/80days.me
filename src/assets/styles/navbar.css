@@ -1,12 +1,37 @@
 @import url('../styles/constant.css');
 
 .navbar{
-    padding:0 20px;
+    padding:0px 20px;
     position: relative;
+    height: 80px;
 }
+
+.navbar-fixed{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 2999;
+}
+
+.navbar-fixed-active{
+    background-color: #efefef;
+    -webkit-box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+}
+
+/* .left-logo-fixed{
+    position: fixed;
+    left: 20;
+}
+
+.right-links-fixed{
+    position: fixed;
+    right: 20;
+} */
 
 .left-logo{
     width: 300px;
+    margin-top: -30px;
 }
 
 .nav-brand{
@@ -39,7 +64,7 @@
 
 .global-logo{
     margin-right: 8px;
-    margin-top: -3px;
+    margin-top: -2px;
 }
 
 .circle{

@@ -44,8 +44,8 @@ const HomePage = () => {
                </div>
                </div>
                <div className='user-select'>
-                 <HiUser size={20}/>
-               <div style={{marginLeft:"3px"}}>
+                 <HiUser size={18}/>
+               <div style={{marginLeft:"4px"}}>
                   <div onClick={() => handleOpen(!open)} className="fontw-500 fonts-18">{userVal}</div>
                </div>
                </div>

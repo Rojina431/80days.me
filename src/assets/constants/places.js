@@ -1,13 +1,13 @@
 export const CountryNames = [
-   "London (LON)",
-   "Abu Dhabi (AUH)",
-   "Amsterdem (AMS)",
-   "Antalya (AYT)"
+   {value:"London (LON)", label:"London (LON)"},
+   {value:"Abu Dhabi (AUH)", label:"Abu Dhabi (AUH)"},
+   {value:"Amsterdem (AMS)", label:"Amsterdem (AMS)"},
+   {value:"Antalya (AYT)", label:"Antalya (AYT)"}
 ]
 
 export const PlaceNames = [
-    "Eurotrip With Covid Vaccine Passport",
-    "Eurotrip: Romantic Cities",
+    {value:"Eurotrip With Covid Vaccine Passport", label:"Eurotrip With Covid Vaccine Passport"},
+    {value:"Eurotrip: Romantic Cities", label:"Eurotrip: Romantic Cities"}
  ]
 
  export const ContryNames = [
