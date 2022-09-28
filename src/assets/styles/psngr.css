@@ -113,7 +113,7 @@
     margin-right: 10px;
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 15px;
     position: relative;
@@ -129,4 +129,26 @@
     left: 40%;
     bottom: 90%;
     z-index: 999;
+}
+
+@media (min-width:0px) and (max-width:650px) {
+    .pay-row{
+        display: block;
+    }
+
+    .col-left, .col-right, .price-btn{
+       width: 100%;
+    }
+
+    .form-cont-shadow{
+        display: block;
+    }
+
+    .form-shadow-text{
+        display: none;
+    }
+
+    .price-btn{
+        padding: 0 25%;
+    }
 }

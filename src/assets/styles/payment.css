@@ -57,6 +57,10 @@
     text-transform: uppercase;
 }
 
+.head-inner .left-head{
+    display: flex;
+}
+
 .left-text{
     position: absolute;
     right: 30px;
@@ -65,6 +69,7 @@
 
 .sno{
     width: 30px;
+    height: 30px;
     line-height: 28px;
     background-color: black;
     color: var(--white-color);
@@ -73,9 +78,15 @@
     border-radius: 50%;
 }
 
+.pay-logo{
+    position: absolute;
+    right: 30px;
+}
+
 .form-head{
     font-size: 18px;
     font-weight: bold;
+    width: 300px;
 }
 
 .body-container{
@@ -107,7 +118,7 @@
     border: 1px solid black;
 }
 
-@media (min-width:0px) and (max-width:800px) {
+@media (min-width:0px) and (max-width:1000px) {
    .pay-body{
     display: block;
     width: 100%;
@@ -117,12 +128,43 @@
    .payment-form{
     width: 100%;
     margin:0;
-    margin-bottom: 10px;
+    border-bottom: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
    }
 
    .total-estimate-payment{
     width: 100%;
     position: static;
     padding: 0 30px;
+   }
+}
+
+
+@media (min-width:0px) and (max-width:650px) {
+
+    .pay-logo{
+        position: static;
+        margin-bottom: 10px;
+    }
+
+    .pay-logo .img-2{
+        display: none;
+    }
+
+    .logos .head-inner{
+        display: block;
+    }
+}
+
+@media (min-width:0px) and (max-width:600px) {
+    .route-line{
+        margin: 0 30px 40px;
+    }
+}
+
+@media (min-width:0px) and (max-width:400px) {
+   .form-head{
+    width: 200px;
    }
 }

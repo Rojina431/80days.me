@@ -18,13 +18,13 @@ const PayProcess = () => {
 
     return (
         <Fragment>
-            <PaymentFormHeader isImage={true} class="head-outer"
+            <PaymentFormHeader isImage={true} class="head-outer" class1="logos"
                 sno="4" formHead="Payment" leftText={payImage} img2={poweredBy} />
             <div className='body-container' style={{paddingBottom:"0px"}}>
                 <div className='form-cont' style={{marginBottom:"30px"}}>
-                    <div className='form-cont-inner' style={{padding:"30px 40px"}}>
+                    <div className='form-cont-inner'>
                     <div className="image-pay">
-                    <div className='mr-3 image-pay-left'>
+                    <div className='image-pay-left'>
                         <div className="form-check radio">
                             <input className="form-check-input"
                              onClick={() => setIsDebit(true)}
@@ -64,7 +64,7 @@ const PayProcess = () => {
                <div className='card-no form-check'>
                 <input type="checkbox" className="form-check-input"/>
                 <label className="form-check-label fontw-300" 
-                style={{marginLeft:"30px", lineHeight:"1.64", color:"#999"}}>
+                style={{marginLeft:"10px", lineHeight:"1.64", color:"#999"}}>
                 I accept the <a href='#' style={{color:"#999"}}>Terms and Conditions</a> of Eightydays.me and agree with Eightydays.me's immediate performance of services. I also acknowledge that I cannot withdraw from Eightydays.me's service agreement.
                 </label>
                </div>

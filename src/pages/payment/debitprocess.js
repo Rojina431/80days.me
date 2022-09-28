@@ -6,7 +6,7 @@ const DebitProcess = () => {
     return (
         <Fragment>
             <div>
-                <div className='pay-row' style={{ padding: "30px 0" }}>
+                <div className='pay-row' style={{ padding: "20px 0" }}>
                     <div className='col-left-1'>
                         <label className="form-label fonts-12">Name on the card</label>
                         <input type="text" className="form-control" placeholder="" />

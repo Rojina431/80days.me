@@ -8,9 +8,9 @@ import PaymentPage from './pages/payment';
 function App() {
   return (
     <div className="App">
-      <HomePage/>
+      {/* <HomePage/> */}
       {/* <LoginSignUp/> */}
-      {/* <PaymentPage/> */}
+      <PaymentPage/>
     </div>
   );
 }
