@@ -25,7 +25,7 @@ const HeaderMap = () => {
 
   return (
     <Fragment>
-    <div className="map navbar">
+    <div className="map navbar navbar-fixed">
       <div className="left-logo no-underline">
       <div className='toggle-home'>
       <Link to="/" className=" each-links">

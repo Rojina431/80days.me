@@ -4,7 +4,7 @@ import LeftContainer from "./leftcont"
 
 const LeftWhole = () => {
     return (
-        <Fragment>
+        <div style={{marginTop:"80px"}}>
 
             {BookedAdventureDetails.map((adv, i) => {
                 return (
@@ -21,7 +21,7 @@ const LeftWhole = () => {
                                 </div>
                             </div>
                         </div>
-                        <LeftContainer summary={adv} color={Colors[i]} />
+                        <LeftContainer i={i} summary={adv} color={Colors[i]} />
                     </Fragment>
                 )
             })
@@ -37,7 +37,7 @@ const LeftWhole = () => {
                     </div>
                 </div>
             </div>
-        </Fragment>
+        </div>
     )
 }
 

@@ -2,19 +2,19 @@ import { Fragment } from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import '../../assets/styles/map.css'
 
-const LeftContainer = ({summary, color}) => {
+const LeftContainer = ({ summary, color, i }) => {
     return (
         <Fragment>
             <div className='map-container'>
-                <div className='map-left' style={{zIndex:4}}>
-           <img src="https://app.eightydays.me/static/media/aeroplane-1.a2c8dcab.svg"
-            alt="icon" className="airplane-icon"/>
-           <div className="airname" style={{marginTop:"-3px"}}>{summary.airName}</div>
-           <div className='fonts-12 fontw-700' style={{color:color, textTransform:"uppercase"}}>{summary.startDate}</div>
-           <div className='fonts-10 mb-3'>{summary.startDay}</div>
-        </div>
-                <div className='map-right' style={{zIndex:4}}>
-                    <div className="summary-left-cont">
+                <div className='map-left' style={{ zIndex: 4 }}>
+                    <img src="https://app.eightydays.me/static/media/aeroplane-1.a2c8dcab.svg"
+                        alt="icon" className="airplane-icon" />
+                    <div className="airname" style={{ marginTop: "-3px" }}>{summary.airName}</div>
+                    <div className='fonts-12 fontw-700' style={{ color: color, textTransform: "uppercase" }}>{summary.startDate}</div>
+                    <div className='fonts-10 mb-3'>{summary.startDay}</div>
+                </div>
+                <div className='map-right' style={{ zIndex: 4 }}>
+                    <div className="summary-left-cont mb-1">
                         <div style={{ display: "flex" }}>
                             <div className="summary-route">
                                 {summary.fromCity} <BsArrowRight />  {summary.toCity}
@@ -51,7 +51,12 @@ const LeftContainer = ({summary, color}) => {
                             </div>
                         </div>
                     </div>
+                   
                 </div>
+            </div>
+            <div style={{marginLeft:"14%"}}>
+                        <span style={{marginRight:"8px"}} className="badge rounded-pill text-bg-light">Airbnb</span>
+                        <span className="badge rounded-pill text-bg-light">Hotels</span>
             </div>
         </Fragment>
     )

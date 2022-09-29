@@ -13,7 +13,7 @@
 .st-path{
     background-color: red;
     width: 1px;
-    height: 240px;
+    height: 270px;
     position: absolute;
     margin-top: 61px;
     left: 8%;
@@ -184,6 +184,31 @@
     .pasng-select div:hover{
       background-color: var(--blue-color);
     }
+
+ /*bottom container*/
+ 
+ .bottom-container{
+    height: 100px;
+    /* position: absolute;
+    bottom: 0; */
+    margin: 0;
+    padding: 10px 20px;
+    -webkit-box-shadow: 5px 4px 20px 0 rgb(0 0 0 / 10%);
+    box-shadow: 5px 4px 20px 0 rgb(0 0 0 / 10%);
+    background-color: var(--white-color);
+    width: 100%;
+    z-index: 999;
+    margin-top: 80px;
+ }
+
+ .bottom-text{
+   color: #111;
+   font-size: 12px;
+   font-weight: 500;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 10px;
+ }
 
 @media (min-width:600px) and (max-width:1128px) {
     .non-stop{
