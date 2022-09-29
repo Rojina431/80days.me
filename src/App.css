@@ -75,3 +75,16 @@
 .black-text{
   color: var(--black-color);
 }
+
+.green-text{
+  color: var(--green-color);
+}
+
+.green-text-hover:hover{
+  color: var(--green-color);
+}
+
+/**/
+.rel-position{
+  position: relative;
+}

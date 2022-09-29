@@ -83,8 +83,20 @@
     right: 80px;
     bottom: 30px;
     background-color: var(--white-color);
+    -webkit-box-shadow: 5px 4px 20px 0 rgb(0 0 0 / 10%);
+    box-shadow: 5px 4px 20px 0 rgb(0 0 0 / 10%);
     border-radius: 10px;
     padding: 10px 15px;
+}
+
+.check-icon-cont{
+    position: relative;
+}
+
+.check-icon{
+    position: absolute;
+    right: 10px;
+    top: -20px;
 }
 
 .top-date{
@@ -147,10 +159,6 @@
     margin:30px 0 10px 0;
     color: #4a4a4a;
     cursor: pointer;
-}
-
-.personal-item div:hover{
-    color: var(--green-color);
 }
 
 .personal-item img{

@@ -1,0 +1,13 @@
+.tooltip-comp{
+    background-color: var(--white-color);
+    -webkit-box-shadow: 0 2px 8px 0 rgb(0 0 0 / 15%);
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 15%);
+    border-radius: 8px;
+    padding:20px;
+    font-size:12px;
+    font-weight: 400;
+    position: absolute;
+    top:-150px;
+    z-index: 999;
+    width: 200px;
+}

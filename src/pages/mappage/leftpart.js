@@ -8,7 +8,7 @@ const LeftWhole = () => {
 
             {BookedAdventureDetails.map((adv, i) => {
                 return (
-                    <Fragment>
+                    <Fragment key={i}>
                         <div>
                             <div className='st-path' style={{backgroundColor:Colors[i]}}></div>
                             <div className='date-container' style={{ zIndex: 2 }}>
@@ -21,7 +21,7 @@ const LeftWhole = () => {
                                 </div>
                             </div>
                         </div>
-                        <LeftContainer key={i} summary={adv} color={Colors[i]} />
+                        <LeftContainer summary={adv} color={Colors[i]} />
                     </Fragment>
                 )
             })
