@@ -6,6 +6,7 @@ import '../../assets/styles/navbar.css'
 
 const HeaderHome = (props) => {
 
+  const [isLogged, setIsLogged] = useState(false)
 
   return (
     <div className="navbar">
@@ -34,11 +35,11 @@ const HeaderHome = (props) => {
           <span className='each-links-text'>My Bookings</span>
         </div>
         <div className='fonts-14 fontw-500 lineh-78 black-text each-links each-links-text'>
-          <span className='each-links-text'>Log In</span>
+          <span className='each-links-text'>{isLogged ? "Log Out" : "Log In"}</span>
         </div>
-        <div className='circle each-links lineh-78 fontw-500' style={{backgroundColor:"rgb(128, 76, 180)"}}>
+        {isLogged && <div className='circle each-links lineh-78 fontw-500' style={{backgroundColor:"rgb(128, 76, 180)"}}>
           <span>N</span>
-        </div>
+        </div>}
       </div>
     </div>
   )

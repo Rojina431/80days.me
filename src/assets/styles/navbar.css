@@ -1,9 +1,13 @@
 @import url('../styles/constant.css');
 
 .navbar{
-    padding:0px 20px;
+    padding:0px;
     position: relative;
     height: 80px;
+}
+
+.map{
+    z-index: 3;
 }
 
 .navbar-fixed{
@@ -19,35 +23,39 @@
     box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
 }
 
-/* .left-logo-fixed{
-    position: fixed;
-    left: 20;
-}
-
-.right-links-fixed{
-    position: fixed;
-    right: 20;
-} */
-
 .left-logo{
-    width: 300px;
-    margin-top: -30px;
+    width: 30%;
+    padding: 30px 20px 0 30px;
 }
 
 .nav-brand{
     display: flex;
-    font-family: Futura;
-}
-
-.left-logo img{
-    padding-top: 20px;
+    margin-top: -30px;
 }
 
 .left-logo span {
-    padding-top: 28px;
-    margin-left: 35px;
+    /* padding-top: 28px; */
+    padding-left: 35px;
+} 
+
+.mid-right{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
 }
 
+.mid-links{
+    margin-top: 30px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .right-links{
     position: absolute;
@@ -56,10 +64,13 @@
     display: flex;
 }
 
+.toggle-icon{
+    display: none;
+}
+
 .each-links{
     margin-right: 18px;
     margin-left: 18px;
-    display: inline-block;
 }
 
 .global-logo{
@@ -80,6 +91,71 @@
 }
 
 
+.route-type{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .9px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.route-type.active{
+    border-bottom: 2px solid black;
+}
+
+.toggle-home{
+    display: none;
+}
+
+@media (min-width:1028px) and (max-width:1150px) {
+    .route-city{
+        display: none;
+    }
+}
+
+@media (min-width:728px) and (max-width:1028px) {
+    .route-city{
+        display: inline;
+    }
+}
+
+@media (min-width:0px) and (max-width:1028px) {
+
+    .mid-right{
+        padding: 0;
+        position: relative;
+        background-color: white;
+        -webkit-box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+        box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+    }
+
+    .mid-links{
+        width: 80%;
+        justify-content: space-between;
+    }
+
+    .mid-right .right-links{
+        display: none;
+    }
+
+    .toggle-icon{
+        border-left: 1px solid #dadae3;
+        height: 80px;
+        display: inline-block;  
+        width: 10%;
+        position: absolute;
+        right: 0;
+        padding-left:10px;
+        padding-top: 25px;
+    }
+}
+
+@media (min-width:0px) and (max-width:728px) {
+    .route-city{
+        display: none;
+    }
+}
 
 @media (min-width:0px) and (max-width:780px) {
     .left-logo{
@@ -89,6 +165,53 @@
     .left-logo span{
         display: none;
     }
+
+    .map{
+        height: 50px;
+        background-color: white;
+        -webkit-box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+        box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+    }
+
+    .map .nav-brand{
+        display: none;
+    }
+    
+    .mid-right{
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .mid-links{
+        margin-top: 15px;
+        margin-right: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+ 
+    .map .left-logo{
+        height: 50px;
+        width: 10%;
+        padding: 10px 0;
+        border-right: 1px solid #dadae3;
+    }
+
+    .toggle-home{
+        display: inline;
+    }
+
+    .map .left-logo{
+        padding-left: 0px;
+    }
+
+    .mid-right{
+        width: 90%;
+    }
+
+    .toggle-icon{
+        height: 50px;
+        padding-top: 10px;
+    }
 }
 
 @media (min-width:0px) and (max-width:710px) {
@@ -97,3 +220,24 @@
     display: none;
    }
 }
+
+@media (min-width:0px) and (max-width:500px) {
+
+    .toggle-icon{
+     padding-left: 2px;
+    }
+
+    .map .left-logo{
+        padding-left: 0px;
+        margin: 0px;
+        width: 15%;
+    }
+
+    .mid-right{
+        width: 80%;
+    }
+
+    .toggle-icon{
+        width: 12%;
+    }
+ }

@@ -8,7 +8,6 @@ const style = {
     boxShadow: 'none',
     backgroundColor: "transparent",
     marginTop: "-7px",
-    color:"white",
     fontSize:"14px",
     fontWeight:"700",
   })

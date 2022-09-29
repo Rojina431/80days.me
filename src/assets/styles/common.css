@@ -127,11 +127,21 @@ padding: 0px;
     display: none !important;
 }
 
-.css-1rhbuit-multiValue{
+.include .css-1rhbuit-multiValue{
     background-color: var(--green-color) !important;
     color: var(--white-color) !important;
 }
 
-.css-12jo7m5 {
+.include .css-12jo7m5 {
     color: var(--white-color) !important;
+}
+
+.exclude .css-1rhbuit-multiValue{
+    background-color: var(--white-color) !important;
+    border: 1px solid var(--grey-color) !important;
+    color: var(--grey-color) !important;
+}
+
+.exclude .css-12jo7m5 {
+    color: var(--grey-color) !important;
 }

@@ -129,7 +129,7 @@ useEffect(() => {
                 <DateRangeComp
                 state={state}
                 handleDatePicker={handleDatePicker}/> :
-                <div nClick={() => setOpenDate(true)} className="fonts-14 fontw-700" style={{display:"flex", justifyContent:"space-around", paddingLeft:"50px"}}>
+                <div onClick={() => setOpenDate(true)} className="fonts-14 fontw-700" style={{display:"flex", justifyContent:"space-around", paddingLeft:"50px"}}>
                   <div>{format(state[0].startDate, "eee, MMM dd")}</div> 
                   <div style={{backgroundColor:"black", marginTop:"11px", width:"12px", height:"2px"}}></div> 
                   <div>{format(state[0].endDate, "eee, MMM dd")}</div>
@@ -149,7 +149,7 @@ useEffect(() => {
               <div className='_10percent-field-icon'>
                 <AiFillCheckCircle/>
               </div>
-              <div className='border-field-one'>
+              <div className='border-field-one include'>
               <SelectMultiplePlace handleNumber={handleNumberIn}
               placeholder="Include city (max. 3)" value={from} 
               data={CountryNames} handleChange={handleFrom}/>
@@ -159,7 +159,7 @@ useEffect(() => {
               <div className='_10percent-field-icon'>
                 <AiFillMinusCircle/>
               </div>
-              <div className='border-field-one'>
+              <div className='border-field-one exclude'>
               <SelectMultiplePlace 
               handleNumber={handleNumberEx}
               placeholder="Exclude city (max. 3)" value={from} data={CountryNames} handleChange={handleFrom}/>

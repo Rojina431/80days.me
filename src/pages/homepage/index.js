@@ -64,7 +64,6 @@ const HomePage = () => {
                   </div>
               
             </div>
-            <div className='home-cookies'>Cookies</div>
             <BookingPopup open={bookingsOpen}/>
          </div>
       </Fragment>
