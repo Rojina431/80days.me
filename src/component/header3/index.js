@@ -3,6 +3,7 @@ import { TbWorld } from 'react-icons/tb'
 import { IoIosArrowDown } from 'react-icons/io'
 import '../../assets/styles/common.css'
 import '../../assets/styles/navbar.css'
+import LeftLogComp from '../leftlogo'
 
 const HeaderPayment = (props) => {
 
@@ -20,16 +21,7 @@ const HeaderPayment = (props) => {
   return (
     <div className="navbar navbar-fixed">
       <div className="left-logo left-logo-fixed no-underline">
-        <a href="#" className=" each-links">
-          <div className='nav-brand'>
-            <div>
-              <img src="https://app.eightydays.me/static/media/logo-path.468963eb.svg" alt="logo" />
-            </div>
-            <span className='fonts-20 fontw-500 letterspace-47 black-text nav-text'>80days.me</span>
-
-          </div>
-        </a>
-
+          <LeftLogComp/>
       </div>
       <div className="right-links right-links-fixed">
         <div className='global-logo lineh-78'>

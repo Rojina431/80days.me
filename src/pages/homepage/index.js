@@ -4,6 +4,7 @@ import HeaderHome from '../../component/header1'
 import '../../assets/styles/home.css'
 import HomePageForm from './form'
 import BookingPopup from './bookingpopup'
+import { Link } from 'react-router-dom'
 
 const HomePage = () => {
 
@@ -59,7 +60,9 @@ const HomePage = () => {
                   </div>}
                   <HomePageForm handleHeight={handleHeight}/>
                   <div className='bottom-btn'>
+                  <Link to="/map/">
                   <button className='btn-green'>Design Adventure</button>
+                  </Link>
                   </div>
                   </div>
               

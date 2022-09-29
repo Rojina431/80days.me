@@ -3,6 +3,8 @@ import { TbWorld } from 'react-icons/tb'
 import { IoIosArrowDown } from 'react-icons/io'
 import '../../assets/styles/common.css'
 import '../../assets/styles/navbar.css'
+import { Link } from 'react-router-dom'
+import LeftLogComp from '../leftlogo'
 
 const HeaderHome = (props) => {
 
@@ -11,15 +13,7 @@ const HeaderHome = (props) => {
   return (
     <div className="navbar">
       <div className="left-logo no-underline">
-        <a href="#" className=" each-links">
-          <div className='nav-brand'>
-            <div>
-              <img src="https://app.eightydays.me/static/media/logo-path.468963eb.svg" alt="logo" />
-            </div>
-            <span className='fonts-20 fontw-500 letterspace-47 black-text nav-text'>80days.me</span>
-
-          </div>
-        </a>
+       <LeftLogComp/>
 
       </div>
       <div className="right-links">
@@ -34,8 +28,10 @@ const HeaderHome = (props) => {
           onClick={() => props.handleBookingsModal(true)}>
           <span className='each-links-text'>My Bookings</span>
         </div>
-        <div className='fonts-14 fontw-500 lineh-78 black-text each-links each-links-text'>
-          <span className='each-links-text'>{isLogged ? "Log Out" : "Log In"}</span>
+        
+        <div style={{cursor:"pointer"}} className='fonts-14 fontw-500 lineh-78 black-text each-links each-links-text'>
+        {!isLogged ? <Link to="/login/" style={{textDecoration:"none"}}><span className='each-links-text black-text'>Log In</span></Link>
+         : <span className='each-links-text'>Log Out</span>}  
         </div>
         {isLogged && <div className='circle each-links lineh-78 fontw-500' style={{backgroundColor:"rgb(128, 76, 180)"}}>
           <span>N</span>

@@ -7,6 +7,7 @@ import luggage from '../../assets/images/luggage.png'
 import trolly from '../../assets/images/trolly.png'
 import checkIcon from '../../assets/images/check-icon.svg'
 import TooltipComponent from '../../component/tooltipcomp'
+import { Link } from 'react-router-dom'
 
 const RightBottomContainer = () => {
 
@@ -136,7 +137,9 @@ const RightBottomContainer = () => {
             </div>
             </div> </Fragment> : <div className='long-para'>One of the carriers couldn’t confirm the availability of the tickets. Please, change parameters to create a trip</div>}
             <div className="btn-signup-login">
-                {isCalc ? <button className='btn-green'>Continue</button> :
+                {isCalc ? <Link to="/payment/">
+                    <button className='btn-green'>Continue</button>
+                </Link> :
                 <button className='btn-green' style={{backgroundColor:"#788a86"}}>Try Again</button>}
             </div>
         </div>

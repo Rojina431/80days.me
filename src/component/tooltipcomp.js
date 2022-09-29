@@ -2,7 +2,7 @@ import '../assets/styles/tooltip.css'
 
 const TooltipComponent  = (props) => {
     return (
-        <div className="tooltip-comp" style={{top:props.top}}>
+        <div className="tooltip-comp" style={{top:props.top, zIndex:2}}>
            <div>{props.para1}</div>
            <div>{props.para2}</div>
            <div>{props.para3}</div>

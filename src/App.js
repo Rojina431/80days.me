@@ -1,18 +1,22 @@
 
 import './App.css';
 import './assets/styles/common.css'
-import HomePage from './pages/homepage';
-import LoginSignUp from './pages/loginsignup';
-import MapPage from './pages/mappage';
-import PaymentPage from './pages/payment';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { allRoutes } from './routes/routes';
 
 function App() {
   return (
     <div className="App">
-      {/* <HomePage/> */}
-      {/* <LoginSignUp/> */}
-      {/* <PaymentPage/> */}
-       <MapPage/>
+      <BrowserRouter>
+         <Routes>
+          {allRoutes.map((route, index) => {
+            return <Route key={index} 
+            path={route.path} 
+            element={route.elements}
+            exact={route.exact}/>
+          })}
+         </Routes>
+      </BrowserRouter>
     </div>
   );
 }

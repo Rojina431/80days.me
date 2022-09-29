@@ -229,4 +229,12 @@
     .map-container{
         padding-right: 40px;
     }
+
+    .right-bottom-container{
+        width: 90%;
+        position: static;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 40px
+    }
 }

@@ -8,6 +8,6 @@
     font-weight: 400;
     position: absolute;
     top:-150px;
-    z-index: 999;
+    z-index: 999 !important;
     width: 200px;
 }

@@ -7,6 +7,8 @@ import { ImCross } from 'react-icons/im'
 import '../../assets/styles/common.css'
 import '../../assets/styles/navbar.css'
 import useWindowsDimensions from '../windowdimension'
+import { Link } from 'react-router-dom'
+import LeftLogComp from '../leftlogo'
 
 const HeaderMap = () => {
 
@@ -26,11 +28,11 @@ const HeaderMap = () => {
     <div className="map navbar">
       <div className="left-logo no-underline">
       <div className='toggle-home'>
-      <a href="/" className=" each-links">
+      <Link to="/" className=" each-links">
         <CgHome className='black-text' size={30}/>
-      </a>
+      </Link>
       </div>
-        <a href="#" className=" each-links">
+        {/* <a href="#" className=" each-links">
           <div className='nav-brand'>
             <div>
               <img src="https://app.eightydays.me/static/media/logo-path.468963eb.svg" alt="logo" />
@@ -38,7 +40,8 @@ const HeaderMap = () => {
             <span className='fonts-20 fontw-500 letterspace-47 black-text nav-text'>80days.me</span>
 
           </div>
-        </a>
+        </a> */}
+        <LeftLogComp/>
       </div>
       <div className='mid-right'>
       <div className='mid-links'>
