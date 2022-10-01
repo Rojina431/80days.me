@@ -157,7 +157,7 @@ const MapPage = () => {
             })
             if(arr1.length > 0) {
                setValue(100)
-               console.log("stop")
+               setIsError(true)
             } else {
                 findCoordStartEnd(from, to)
                 setIncludeCity(location.state.include)
@@ -184,7 +184,6 @@ const MapPage = () => {
     }, [])
 
     useEffect(() => {
-      console.log("hi")
       setValue(40)
       var cities = []
         if(shuffleCity.length > 0) {
@@ -233,20 +232,17 @@ const MapPage = () => {
     }
 
     const handleCityNo = (val) => {
-      console.log("cityNo")
       setCityNo(val)
       getRoutes(shuffleCity, val)
     }
 
     useEffect(() => {
       setValue(80)
-      console.log("so here")
       if(cityNo === routeCity.length){
         findRoutesCoord()
       }
     }, [cityNo, routeCity])
 
-    console.log("hell", routeCity, routeCord.length, cityNo)
 if(dates.length > 0) {
    if(isLoading || isError) {
       return <LoadingComponent isError={isError} value={value} from={fromCity} to={toCity} dates={dates}/>

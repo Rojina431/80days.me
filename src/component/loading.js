@@ -5,7 +5,7 @@ import '../assets/styles/loading.css'
 const LoadingComponent = (props) => {
     const fromSplit = props.from.value.split("(")
     const toSplit = props.to.value.split("(")
-    console.log(fromSplit[1].split(")")[0])
+    console.log(props.isError)
     return (
         <div className="loading-page">
             <div className="load-comp">
