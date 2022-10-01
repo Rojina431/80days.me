@@ -10,7 +10,7 @@ import useWindowsDimensions from '../windowdimension'
 import { Link } from 'react-router-dom'
 import LeftLogComp from '../leftlogo'
 
-const HeaderMap = () => {
+const HeaderMap = (props) => {
 
   const [isLogged, setIsLogged] = useState(false) 
   const [isClicked, setisClicked] = useState(false)
@@ -32,23 +32,18 @@ const HeaderMap = () => {
         <CgHome className='black-text' size={30}/>
       </Link>
       </div>
-        {/* <a href="#" className=" each-links">
-          <div className='nav-brand'>
-            <div>
-              <img src="https://app.eightydays.me/static/media/logo-path.468963eb.svg" alt="logo" />
-            </div>
-            <span className='fonts-20 fontw-500 letterspace-47 black-text nav-text'>80days.me</span>
-
-          </div>
-        </a> */}
         <LeftLogComp/>
       </div>
       <div className='mid-right'>
       <div className='mid-links'>
-        <div className='route-type'>2 <span className='route-city'>Cities</span></div>
+        {props.shuffleCity.map((city, i) => {
+          return <div key={i} className='route-type' style={{borderBottom: `${props.cityNo === city ? "2px solid black" : "0px"} `}}
+           onClick={() => props.handleChange(city)}>{city} <span className='route-city'>Cities</span></div>
+        })}
+{/*         
         <div className='route-type'>3 <span className='route-city'>Cities</span></div>
         <div className='route-type'>4 <span className='route-city'>Cities</span></div>
-        <div className='route-type active'>5 <span className='route-city'>Cities</span></div>
+        <div className='route-type active'>5 <span className='route-city'>Cities</span></div> */}
       </div>
       <div className="right-links">
         <div className='global-logo lineh-78'>

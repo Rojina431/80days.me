@@ -2,9 +2,9 @@ import {useState, Fragment, useEffect} from 'react'
 import { IoLocationSharp } from 'react-icons/io5'
 import { CgShapeCircle } from 'react-icons/cg'
 import { GoCalendar } from 'react-icons/go'
-import {addDays, format} from 'date-fns'
+import { format} from 'date-fns'
 import {AiFillMinusCircle, AiFillCheckCircle} from 'react-icons/ai'
-import { CountryNames, PlaceNames } from "../../assets/constants/places"
+import { CountryNames, PlaceNames, PlaceNamesFilter } from "../../assets/constants/places"
 import {SelectPlace, SelectMultiplePlace} from "../../component/selectplace"
 
 import Dashed from '../../component/dashed'
@@ -12,52 +12,27 @@ import DateRangeComp from './dateRange'
 
 const HomePageForm = (props) => {
 
-    const [from, setFrom] = useState("London (LON)")
-    const [to, setTo] = useState("London (LON)")
-    const [around, setAround] = useState("Eurotrip: Romantic Cities")
-    const [state, setState] = useState([
-        {
-          startDate: new Date(),
-          endDate: (addDays(new Date(), 7)),
-          key: 'selection'
-        }
-      ])
     const [openDate, setOpenDate] = useState(false)
     const [checkedany, setcheckedany] = useState(true)
     const [checkedto, setcheckedto] = useState(true)
     const [checkedexthree, setcheckedexthree] = useState(false)
     const [checkedinthree, setcheckedinthree] = useState(false)
 
-    const handleFrom = (value) => {
-        console.log(value)
-        setFrom(value)
-    }
-
-    const handleTo = (value) => {
-        setTo(value)
-    }
-
-    const handleAround = (value) => {
-        setAround(value)
-    }
-
     const handleDatePicker = (value) => {
-        console.log(format(value[0].startDate, "eee, MMM dd"))
-        setState(value)
+        props.handleDate(value)
         if(value[0].startDate !== value[0].endDate){
             setOpenDate(false)
         }
     }
 
+    const clickPlace = () => { 
+        setcheckedany(!checkedany)
+        }
+    
+        const clickTo = () => {
+            setcheckedto(!checkedto)
+          }
 
-    const clickPlace = () => {
-        
-    setcheckedany(!checkedany)
-    }
-
-    const clickTo = () => {
-        setcheckedto(!checkedto)
-      }
 
 const heightCalc = () => {
     if(!checkedany &&  !checkedto) {
@@ -105,7 +80,7 @@ useEffect(() => {
               <div className='border-field'>
                <div className='_10percent-field fonts-14'>From</div>
               <div className='select-drop'>
-              <SelectPlace value={from} data={CountryNames} handleChange={handleFrom}/>
+              <SelectPlace value={props.from} data={CountryNames} handleChange={props.handleFrom}/>
               </div>
               </div>
         </div>
@@ -116,7 +91,7 @@ useEffect(() => {
               <div className='border-field'>
                <div className='_10percent-field fonts-14'>Around</div>
               <div className='select-drop'>
-              <SelectPlace value={around} data={PlaceNames} handleChange={handleAround}/>
+              <SelectPlace value={props.around} data={PlaceNames} handleChange={props.handleAround}/>
               </div>
               </div>
         </div>
@@ -127,19 +102,19 @@ useEffect(() => {
               <div className='select-drop'>
                 {openDate ?
                 <DateRangeComp
-                state={state}
+                state={props.state}
                 handleDatePicker={handleDatePicker}/> :
                 <div onClick={() => setOpenDate(true)} className="fonts-14 fontw-700" style={{display:"flex", justifyContent:"space-around", paddingLeft:"50px"}}>
-                  <div>{format(state[0].startDate, "eee, MMM dd")}</div> 
+                  <div>{format(props.state[0].startDate, "eee, MMM dd")}</div> 
                   <div style={{backgroundColor:"black", marginTop:"11px", width:"12px", height:"2px"}}></div> 
-                  <div>{format(state[0].endDate, "eee, MMM dd")}</div>
+                  <div>{format(props.state[0].endDate, "eee, MMM dd")}</div>
                 </div>
             }
               </div>
         </div>
         <div className='each-field shadow-field' onClick={() => clickPlace()}>
         <div className='_10percent-field-check'>
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked={checkedany}/>
+            <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked={checkedany}/>
         </div>
               
               <div className='_10percent-field fonts-14'>Anywhere</div>
@@ -151,8 +126,11 @@ useEffect(() => {
               </div>
               <div className='border-field-one include'>
               <SelectMultiplePlace handleNumber={handleNumberIn}
-              placeholder="Include city (max. 3)" value={from} 
-              data={CountryNames} handleChange={handleFrom}/>
+              around={props.around}
+              values={props.include}
+              placeholder="Include city (max. 3)" 
+              data={PlaceNamesFilter} handleChange={props.handleInclude}
+              />
               </div>
         </div>
         <div className='each-field-varh'>
@@ -161,14 +139,16 @@ useEffect(() => {
               </div>
               <div className='border-field-one exclude'>
               <SelectMultiplePlace 
+              around={props.around}
+              values={props.exclude}
               handleNumber={handleNumberEx}
-              placeholder="Exclude city (max. 3)" value={from} data={CountryNames} handleChange={handleFrom}/>
+              placeholder="Exclude city (max. 3)" data={PlaceNamesFilter} handleChange={props.handleExclude}/>
               </div>
         </div>
             </Fragment>}
             <div className='each-field' onClick={() => clickTo()}>
         <div className='_10percent-field-check'>
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked={checkedto}/>
+            <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked={checkedto}/>
         </div>
               
               <div className='_10percent-field fonts-14'>RoundTrip</div>
@@ -179,7 +159,7 @@ useEffect(() => {
               </div>
                <div className='_10percent-field fonts-14'>To</div>
               <div className='select-drop'>
-              <SelectPlace value={to} data={CountryNames} handleChange={handleTo}/>
+              <SelectPlace value={props.to} data={CountryNames} handleChange={props.handleTo}/>
               </div>
         </div>}
      </div>

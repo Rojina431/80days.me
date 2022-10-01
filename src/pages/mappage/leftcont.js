@@ -54,9 +54,9 @@ const LeftContainer = ({ summary, color, i }) => {
                    
                 </div>
             </div>
-            <div style={{marginLeft:"14%"}}>
-                        <span style={{marginRight:"8px"}} className="badge rounded-pill text-bg-light">Airbnb</span>
-                        <span className="badge rounded-pill text-bg-light">Hotels</span>
+            <div  className='hotels'>
+                        <span style={{marginRight:"8px"}} className="badge rounded-pill text-bg-success">Airbnb</span>
+                        <span className="badge rounded-pill text-bg-warning">Hotels</span>
             </div>
         </Fragment>
     )

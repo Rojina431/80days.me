@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 
 const BottomComponent = (props) => {
 
-    console.log(props.toggleMap)
     return (
         <div className="bottom-container">
            <div className="bottom-text">

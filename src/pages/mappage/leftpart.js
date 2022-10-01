@@ -4,7 +4,7 @@ import LeftContainer from "./leftcont"
 
 const LeftWhole = () => {
     return (
-        <div style={{marginTop:"80px"}}>
+        <div className='left-whole'>
 
             {BookedAdventureDetails.map((adv, i) => {
                 return (
@@ -14,7 +14,7 @@ const LeftWhole = () => {
                             <div className='date-container' style={{ zIndex: 2 }}>
                                 <div className='circle-path' style={{ border: `3.5px solid ${Colors[i]}` }}></div>
                                 <div className='place-det'>
-                                    <div className='stay stay-map'>
+                                    <div className='stay-map fontw-700'  style={{colo:"#111"}}>
                                         {i === 0 ? "Start" : BookedAdventureDetails[i - 1].stay} / {i === 0 ? adv.startDate : `${BookedAdventureDetails[i - 1].startDate} - ${BookedAdventureDetails[i - 1].endDate}`}
                                     </div>
                                     <div className='from-city from-city-map'>{adv.fromCity}</div>

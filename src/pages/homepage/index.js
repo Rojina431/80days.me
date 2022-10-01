@@ -4,7 +4,8 @@ import HeaderHome from '../../component/header1'
 import '../../assets/styles/home.css'
 import HomePageForm from './form'
 import BookingPopup from './bookingpopup'
-import { Link } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
+import { addDays} from 'date-fns'
 
 const HomePage = () => {
 
@@ -12,9 +13,26 @@ const HomePage = () => {
    const [open, setOpen] = useState(false)
    const [height, setHeight] = useState("300px")
    const [bookingsOpen, setBookingsOpen] = useState(false)
+   const [redirect, setRedirect] = useState(false)
+   const [from, setFrom] = useState({value:"Abu Dhabi (AUH)", label:"Abu Dhabi (AUH)"})
+   const [to, setTo] = useState({value:"Abu Dhabi (AUH)", label:"Abu Dhabi (AUH)"})
+   const [around, setAround] = useState({value:"Eurotrip With Covid Vaccine Passport", label:"Eurotrip With Covid Vaccine Passport"})
+   const [include, setInclude] = useState([])
+   const [exclude, setExclude] = useState([])
+   const [state, setState] = useState([
+       {
+         startDate: new Date(),
+         endDate: (addDays(new Date(), 7)),
+         key: 'selection'
+       }
+     ])
 
    const handleBookingsModal = (value) => {
       setBookingsOpen(value)
+   }
+
+   const redirectToMap = () => {
+       setRedirect(true)
    }
 
    const handleChange = (value) => {
@@ -31,7 +49,43 @@ const HomePage = () => {
       setHeight(value)
     }
 
-    return (
+    const handleFrom = (value) => {
+      setFrom(value)
+  }
+
+  const handleTo = (value) => {
+      setTo(value)
+  }
+
+  const handleAround = (value) => {
+      setAround(value)
+  }
+
+  const handleInclude = (value) => {
+     setInclude(value)
+  }
+
+  const handleExclude = (value) => {
+      setExclude(value)
+  }
+
+  const handleDatePicker = (value) => {
+   setState(value)
+}
+
+if(redirect) {
+
+var stateToTransfer = {
+   from:from,
+   to:to,
+   around:around,
+   include:include,
+   exclude:exclude,
+   date:state
+}
+  return <Navigate to="/map"  state={stateToTransfer}/>
+} else {
+   return (
       <Fragment>
          <div className='home'>
             <HeaderHome handleBookingsModal={handleBookingsModal}/>
@@ -58,11 +112,16 @@ const HomePage = () => {
                      <div onClick={() => handleChange(3)}>3 passenger</div>
                      <div onClick={() => handleChange(4)}>4 passengers</div>
                   </div>}
-                  <HomePageForm handleHeight={handleHeight}/>
+                  <HomePageForm handleHeight={handleHeight}
+                  from={from} handleFrom={handleFrom}
+                  to={to} handleTo={handleTo}
+                  include={include} handleInclude={handleInclude}
+                  exclude={exclude} handleExclude={handleExclude}
+                  around={around} handleAround={handleAround}
+                  state={state} handleDate={handleDatePicker}
+                  />
                   <div className='bottom-btn'>
-                  <Link to="/map/">
-                  <button className='btn-green'>Design Adventure</button>
-                  </Link>
+                  <button onClick={() => redirectToMap()} className='btn-green'>Design Adventure</button>
                   </div>
                   </div>
               
@@ -71,6 +130,7 @@ const HomePage = () => {
          </div>
       </Fragment>
     )
+}
 }
 
 export default HomePage

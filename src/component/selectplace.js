@@ -17,41 +17,49 @@ export const SelectPlace = (props) => {
 
   return (
     <Select 
+    onChange={(val) => props.handleChange(val)}
     styles={style}
-    defaultValue={(props.data)[0]}
+    defaultValue={props.value}
     options={props.data}/>
   )
 }
 
 export const SelectMultiplePlace = (props) => {
   
-  console.log(props.placeholder)
-  const [values, setValues] = useState([""])
+  const [data, setData] = useState([])
 
   useEffect(() => {
-     if(values.length === 3) {
+     for(let i = 0; i < props.data.length; i++){
+      if(props.around.value === props.data[i].name){
+        setData(props.data[i].places)
+      }
+     }
+  },  [props.around])
+
+  useEffect(() => {
+     if(props.values.length === 3) {
       props.handleNumber(true)
      } else {
       props.handleNumber(false)
      }
-  }, [values])
+  }, [props.values])
 
   return (
     <Select
     styles={style}
     placeholder={props.placeholder}
-    value={values}
-    options={props.data}
+    value={props.values}
+    options={data}
     isMulti={true}
     onChange={(value) => {
       if(value.length > 0) {
-         if(values.length < 3 || value.length < 3) {
-        setValues(value)
+         if(props.values.length < 3 || value.length < 3) {
+        props.handleChange(value)
        } else {
-         setValues(values)
+         props.handleChange(props.values)
        }
       } else {
-        setValues([""])
+        props.handleChange([])
       }
       console.log(value.length)
       
