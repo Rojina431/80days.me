@@ -345,7 +345,7 @@
  }
 
  .second-list:hover{
-    background-color: var(--grey-next);
+    background-color: rgb(245, 245, 245);
  }
 
  .list-name{

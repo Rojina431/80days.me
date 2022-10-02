@@ -67,7 +67,6 @@ const MapPage = () => {
     }
 
     const findCoordStartEnd = (from, to) => {
-      console.log(from)
       if(from === to) {
          axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${from}.json?access_token=pk.eyJ1Ijoic2FlZWRjaGFjaGFyOTg3NjU0IiwiYSI6ImNsOG51ZmR4bzA1NTkzb3J1ampqcHd1cG8ifQ.K8kc1_o1iJ6J4HU88F8C2Q`).then((resp) => {
          setFromCord({center:resp.data.features[0].center, place:resp.data.features[0].text})
@@ -114,7 +113,6 @@ const MapPage = () => {
        const shuffeledCity = shuffleAlgo(routes)
        setRouteCord([])
        setRouteCity([])
-       console.log(num)
        if(includeCity.length !== 0) {
          for(let j=0; j < includeCity.length; j++) {
             setRouteCity(city => [...city, includeCity[j]])

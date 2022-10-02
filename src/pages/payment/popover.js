@@ -1,7 +1,6 @@
 import { Fragment } from 'react'
 
 const PopoverButton = (props) => {
-   console.log(props.open)
    return (
       <Fragment>
    {props.open && <div className="popover-cont">

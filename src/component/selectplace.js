@@ -61,7 +61,6 @@ export const SelectMultiplePlace = (props) => {
       } else {
         props.handleChange([])
       }
-      console.log(value.length)
       
     }}
     />

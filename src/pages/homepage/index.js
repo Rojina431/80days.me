@@ -36,7 +36,6 @@ const HomePage = () => {
    }
 
    const handleChange = (value) => {
-      console.log(`selected ${value}`);
       setUserVal(value)
       handleOpen(false)
     };

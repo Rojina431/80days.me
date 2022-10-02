@@ -61,7 +61,6 @@ const MapComponent = (props) => {
           <div 
          onClick={() => {
           props.handleRouteChange(route.place)
-          console.log("clicked")
         }} 
           className='custom-btn' style={{color:Colors[i + 1], cursor:"pointer"}}  
           data-bs-toggle="modal" data-bs-target="#cityModal"><MdOutlineLocationOn size={20}/> <div>

@@ -3,10 +3,11 @@ import './App.css';
 import './assets/styles/common.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { allRoutes } from './routes/routes';
+import ChatComponent from './component/chatcomponent';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
          <Routes>
           {allRoutes.map((route, index) => {
@@ -16,6 +17,7 @@ function App() {
             exact={route.exact}/>
           })}
          </Routes>
+         <ChatComponent/>
       </BrowserRouter>
     </div>
   );

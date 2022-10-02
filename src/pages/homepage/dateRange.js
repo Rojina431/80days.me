@@ -11,7 +11,6 @@ const DateRangeComp = (props) => {
            showSelectionPreview={true}
            moveRangeOnFirstSelection={false}
           onChange={(item) => {
-            console.log(item)
             props.handleDatePicker([item.selection])
           }}
           months={2}

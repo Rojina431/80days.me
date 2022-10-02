@@ -31,8 +31,6 @@ const CitypopupComponent = (props) => {
                           <div className='route-head'>Replace the city</div>
                           <div className='route-body'>
                            {CountryNames.map((contry, i) => {
-                            console.log(selected === contry)
-                            console.log(selected)
                             return (
                             <div className='list' key={i} onClick={() => setSelected(contry)}>
                                 {selected === contry ? <div style={{width:"10%"}}><FcCheckmark/></div> : <div style={{width:"10%"}}></div>}
