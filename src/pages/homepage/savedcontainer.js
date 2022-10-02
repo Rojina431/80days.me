@@ -21,9 +21,12 @@ const SavedContainer = ({saved}) => {
                 })
                }</div>
            </div>
-           <div className="col-1 btn-booked" style={{borderLeft:"1px dashed #ededed"}}>
+           <div className="col-4 btn-booked" style={{borderLeft:"1px dashed #ededed"}}>
+            
+           <div className='left-history'>
               <div className='price'>{saved.price}</div>
-              <button className='open-btn'>Open</button>
+              <button className='open-btn mt-2 mb-4'>Open</button>
+           </div>
            </div>
         </div>
       </div>

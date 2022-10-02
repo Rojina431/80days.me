@@ -11,13 +11,11 @@ const HistoryContainer = ({history}) => {
                <div className="country-dest history">{history.fromCountry} <BsArrowRight/> {history.toCountry}</div>
                <div className='dates'>{history.totalNights} nights</div>
            </div>
-           {/* <div className="col-1">
-             <Dashed number={10} color="#ededed"/>
-           </div> */}
-           <div className='col-1 btn-booked' style={{borderLeft:"1px dashed #ededed"}}>
-           <div>          
+           <div className='col-4 btn-booked' style={{borderLeft:"1px dashed #ededed"}}>
+              
+           <div className='left-history'>
               <button className='open-btn'>Open</button> 
-           </div>
+              </div>   
            </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const LeftContainer = ({ summary, color, i }) => {
                     <div className='fonts-12 fontw-700' style={{ color: color, textTransform: "uppercase" }}>{summary.startDate}</div>
                     <div className='fonts-10 mb-3'>{summary.startDay}</div>
                 </div>
-                <div className='map-right' style={{ zIndex: 4 }}>
+                <div className='map-right' style={{ zIndex: 4 }} data-bs-toggle="modal" data-bs-target="#routeModal">
                     <div className="summary-left-cont mb-1">
                         <div style={{ display: "flex" }}>
                             <div className="summary-route">

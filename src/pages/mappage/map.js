@@ -58,7 +58,13 @@ const MapComponent = (props) => {
         longitude={route.center[0]}
         latitude = {route.center[1]}
         >
-          <div className='custom-btn' style={{color:Colors[i + 1]}}><MdOutlineLocationOn size={20}/> <div>
+          <div 
+         onClick={() => {
+          props.handleRouteChange(route.place)
+          console.log("clicked")
+        }} 
+          className='custom-btn' style={{color:Colors[i + 1], cursor:"pointer"}}  
+          data-bs-toggle="modal" data-bs-target="#cityModal"><MdOutlineLocationOn size={20}/> <div>
           <div>{route.place}</div>
           <div className='subtitle'></div>
           </div>

@@ -40,10 +40,6 @@ const HeaderMap = (props) => {
           return <div key={i} className='route-type' style={{borderBottom: `${props.cityNo === city ? "2px solid black" : "0px"} `}}
            onClick={() => props.handleChange(city)}>{city} <span className='route-city'>Cities</span></div>
         })}
-{/*         
-        <div className='route-type'>3 <span className='route-city'>Cities</span></div>
-        <div className='route-type'>4 <span className='route-city'>Cities</span></div>
-        <div className='route-type active'>5 <span className='route-city'>Cities</span></div> */}
       </div>
       <div className="right-links">
         <div className='global-logo lineh-78'>
@@ -55,8 +51,8 @@ const HeaderMap = (props) => {
         <div className='no-underline each-links lineh-78'>
            <a href="#" className=' fonts-14 fontw-500 lineh-34 black-text each-links-text'>Save</a>
         </div>
-        <div className='no-underline each-links lineh-78'>
-           <a href="#" className=' fonts-14 fontw-500 lineh-34 black-text each-links-text'>Share</a>
+        <div className='no-underline each-links lineh-78' data-bs-toggle="modal" data-bs-target="#shareModal">
+           <span style={{cursor:"pointer"}} className=' fonts-14 fontw-500 lineh-34 black-text each-links-text'>Share</span>
         </div>
         {!isLogged ? <div className='fonts-14 fontw-500 lineh-78 black-text each-links each-links-text'>
           <span className='each-links-text'>Log In</span>

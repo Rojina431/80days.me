@@ -3,10 +3,21 @@
 }
 
 .left-whole{
+    height: 80vh;
     position: absolute;
     width: 50%;
-    top:80px
+    top:80px;
+    overflow-y: scroll;
 }
+
+.left-whole::-webkit-scrollbar{
+    display: none;
+}
+
+.left-whole {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
 
 .map-container, .date-container{
     margin-left: 20px;
@@ -243,6 +254,110 @@
     font-size: 12px;
  }
 
+ /*share modal*/
+ .content{
+    text-align: center;
+    padding: 10px !important;
+    min-height: 150px !important;
+ }
+
+ .head-text{
+   font-size: 16px;
+   font-weight: 300;
+   letter-spacing: .3px;
+ }
+
+ .text-btn{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 1px 0 3px #666;
+    box-shadow: inset 1px 0 3px #666;
+    margin: 10px 0;
+    padding: 10px;
+    overflow: hidden;
+ }
+
+ .copy-btn{
+    position: relative;
+ }
+
+ .btn-copy{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ /*route modal*/
+
+ .date.nav{
+    display: flex !important;
+    justify-content: space-evenly !important;
+ }
+
+.date.nav-item{
+    width: 100px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 13px !important;
+}
+
+.date .nav-link.active{
+    border-bottom: 2px solid rgb(76, 217, 100) !important;
+    color: rgb(76, 217, 100) !important;
+}
+
+ /*city modal*/
+
+ .route-content{
+    margin-top: 10px;
+ }
+
+ .route-head{
+    font-size: 13px;
+    font-weight: 500;
+    color: #6d6d72;
+    background-color: #eee;
+    padding: 20px 10px 9px;
+    border-top: 1px solid #ddd;
+    text-transform: uppercase;
+ }
+
+ .route-body{
+    height: 200px;
+    overflow-y: scroll;
+    background-color: #fafafa;
+ }
+
+ .list{
+    display: flex;
+    align-items: center;
+    padding: 0 5px 0 10px;
+ }
+
+ .second-list{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+ }
+
+ .second-list:hover{
+    background-color: var(--grey-next);
+ }
+
+ .list-name{
+    display: flex;
+    width: 70%;
+    align-items: center;
+ }
+
+ .plane{
+    width: 10%;
+ }
+
 @media (min-width:600px) and (max-width:1128px) {
     .non-stop{
         margin-left: -25px;
@@ -288,6 +403,7 @@
     .left-whole{
         position: static;
         width: 100%;
+        height: fit-content;
     }
  }
 

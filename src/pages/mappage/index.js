@@ -10,6 +10,9 @@ import { useLocation } from 'react-router'
 import axios from 'axios'
 import { PlaceNamesFilter } from '../../assets/constants/places'
 import LoadingComponent from '../../component/loading'
+import SharepopupComponent from './sharepopup'
+import CitypopupComponent from './citypopup'
+import RoutepopupComponent from './routepopup'
 
 const MapPage = () => {
 
@@ -24,6 +27,7 @@ const MapPage = () => {
     const [dates, setDates] = useState([])
     const [fromCity, setFromCity] = useState([])
     const [toCity, setToCity] = useState([])
+    const [clickedRoute, setClickedRoute] = useState("")
     const [value, setValue] = useState(0)
     const [isLoading, setLoading] = useState(true)
     const [isError, setIsError] = useState(false)
@@ -218,14 +222,6 @@ const MapPage = () => {
        }
     }, [width])
 
-   //  useEffect(() => {
-   //    if(routeCord.length === cityNo) {
-
-   //       axios.get(`https://api.mapbox.com/optimized-trips/v1/mapbox/cycling/${fromCord.center[0]},${fromCord.center[1]};${routeCord[0].center[0]},${routeCord[0].center[1]}?access_token=pk.eyJ1Ijoic2FlZWRjaGFjaGFyOTg3NjU0IiwiYSI6ImNsOG51ZmR4bzA1NTkzb3J1ampqcHd1cG8ifQ.K8kc1_o1iJ6J4HU88F8C2Q`).then((resp) => {
-   //          console.log(resp,"routiing")
-   //       })
-   //    }
-   //  }, [routeCord])
 
     const handleChange = (value) => {
         setIsMap(value)
@@ -243,18 +239,21 @@ const MapPage = () => {
       }
     }, [cityNo, routeCity])
 
+    const routeChange = (val) => {
+      setClickedRoute(val)
+    }
+
 if(dates.length > 0) {
    if(isLoading || isError) {
       return <LoadingComponent isError={isError} value={value} from={fromCity} to={toCity} dates={dates}/>
     } else {
        return (
           <Fragment>
-            <div className="map-whole" style={{
-               height:`${width>728 ? "100vh" : "fit-content" }`,
-               overflow:`${width>728 ? "hidden" : "auto" }`
-           }}>
+            <div className="map-whole">
             <HeaderMap cityNo={cityNo} shuffleCity = {shuffleCityno} handleChange={handleCityNo}/>
-               {isMap && routeCord.length >0 && routeCord.length === cityNo &&<MapComponent from={fromCord} to={toCord} routes={routeCord}/>}
+               {isMap && routeCord.length >0 && routeCord.length === cityNo &&<MapComponent
+               handleRouteChange={routeChange}
+               from={fromCord} to={toCord} routes={routeCord}/>}
                <div>
                {((!isMap) || (width>728)) &&
                <LeftWhole/>}
@@ -263,6 +262,9 @@ if(dates.length > 0) {
                <BottomComponent toggleMap={isMap} handleChange={handleChange}/>}       
                </div>
             </div>
+            <SharepopupComponent/>
+            <CitypopupComponent route={clickedRoute}/>
+            <RoutepopupComponent/>
           </Fragment>
        )
     }
