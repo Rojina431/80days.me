@@ -33,7 +33,7 @@
 
 .st-path{
     background-color: red;
-    width: 1px;
+    width: 2px;
     height: 270px;
     position: absolute;
     margin-top: 61px;
@@ -63,28 +63,17 @@
     position: relative;
 }
 
-/* .map-left::before{
-    position: absolute;
-    left:0;
-    top: 50%;
-    transform: translateY(-50%);
-    content: "";
-    width: 5px;
-    height: 50%;
-    background-color: var(--yellow-color);
-    border-radius: 0px 6px 6px 0px;
-} */
 
 .circle-path{
-    width: 11px;
-    height: 11px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     margin-left: 13.8%;
     margin-top: 60px;
 }
 
 .map-right{
-    width: 80%;
+    width: 60%;
     cursor: pointer;
     position: relative;
     background-color: var(--white-color);
@@ -423,6 +412,11 @@
  }
 
 @media (min-width:0px) and (max-width:750px) {
+
+    .left-whole{
+        width: 80%;
+    }
+
     .map-container, .date-container{
         width: 100%;
     }

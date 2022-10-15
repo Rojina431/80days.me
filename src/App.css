@@ -19,7 +19,7 @@
 }
 
 .fonts-16{
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .fonts-20{

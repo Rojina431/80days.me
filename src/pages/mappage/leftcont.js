@@ -4,7 +4,7 @@ import '../../assets/styles/map.css'
 
 
 //left each container of map page including time, airport name, air name and so on
-const LeftContainer = ({ summary, color, i }) => {
+const LeftContainer = ({ summary, color, time, date }) => {
     return (
         <Fragment>
             <div className='map-container'>
@@ -17,11 +17,16 @@ const LeftContainer = ({ summary, color, i }) => {
                 </div>
                 <div className='map-right' style={{ zIndex: 4 }} data-bs-toggle="modal" data-bs-target="#routeModal">
                     <div className="summary-left-cont mb-1">
-                        <div style={{ display: "flex" }}>
-                            <div className="summary-route">
+                    
+                        <div style={{ display: "flex" , justifyContent:"space-between"}}>
+                            <div className="summary-route fonts-16">
                                 {summary.fromCity} <BsArrowRight />  {summary.toCity}
                             </div>
+                     
                         </div>
+                        <div className='fontw-700 fonts-12'  style={{color:`${color}`}}>
+                                        {time} / {date}
+                                    </div>
                         <div className="lower row">
                             <div className="col-4">
                                 <div className="airport">
