@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 
+
+//nav bar brand
 const LeftLogComp = () => {
     return (
         <Link to="/" className=" each-links">

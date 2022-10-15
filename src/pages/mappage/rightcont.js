@@ -106,7 +106,7 @@ const RightBottomContainer = () => {
             <div className='personal-item'>
                <div className='rel-position'>
                 <div
-                className='green-text-hover'
+                className='blue-text-hover fonts-14 fontw-500'
                 onMouseEnter={() => setOpentooltip4(true)}
                 onMouseLeave={() => setOpentooltip4(false)}
                 >1x <img src={bag} alt="bag"/></div>
@@ -117,7 +117,7 @@ const RightBottomContainer = () => {
               </div>
                <div className='rel-position'>
                 <div
-                className='green-text-hover'
+                className='blue-text-hover fonts-14 fontw-500'
                 onMouseEnter={() => setOpentooltip5(true)}
                 onMouseLeave={() => setOpentooltip5(false)}
                 >0x <img src={luggage} alt="luggage"/></div>
@@ -128,7 +128,7 @@ const RightBottomContainer = () => {
                </div>
                <div className='rel-position'>
                 <div
-                 className='green-text-hover'
+                 className='blue-text-hover fonts-14 fontw-500'
                  onMouseEnter={() => setOpentooltip6(true)}
                  onMouseLeave={() => setOpentooltip6(false)}
                 >0x <img src={trolly} alt="trolly"/></div>

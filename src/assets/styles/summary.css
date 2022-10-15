@@ -36,17 +36,6 @@
     position: relative;
 }
 
-.summary-left-cont::after{
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 20px;
-    background-color: var(--yellow-color);
-    left: 0;
-    top: 49px;
-    border-radius: 0px 6px 6px 0px;
-}
-
 .summary-date{
     font-size: 12px;
     font-weight: 400;
@@ -92,7 +81,7 @@
     font-size: 10px;
     font-weight: 500;
     color: var(--grey-color);
-    border-bottom: 1px solid var(--yellow-color);
+    border-bottom: 1px solid var(--dark-blue-color);
     margin-left: -25px;
     margin-right: 25px;
     margin-top: 35px;
@@ -108,7 +97,7 @@
     content: "";
     width: 6px;
     height: 0;
-    border-top: 1px solid var(--yellow-color);
+    border-top: 1px solid var(--dark-blue-color);
     margin-right: 22px;
     right: 0;
     bottom:18px;
@@ -136,11 +125,11 @@
     content: "";
     position: absolute;
     width: 5px;
-    height: 20px;
-    background-color: var(--yellow-color);
+    height: 100%;
+    background-color: var(--dark-blue-color);
     right: 0;
-    top: 49px;
-    border-radius: 6px 0 0 6px;
+    top: 0;
+    border-radius: 0 6px 6px 0;
 }
 
 .airplane-icon{

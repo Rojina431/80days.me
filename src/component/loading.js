@@ -2,6 +2,8 @@ import { format } from 'date-fns'
 import { Link } from 'react-router-dom'
 import '../assets/styles/loading.css'
 
+
+//loading component appear while redirecting to map page
 const LoadingComponent = (props) => {
     const fromSplit = props.from.value.split("(")
     const toSplit = props.to.value.split("(")

@@ -157,6 +157,37 @@
     }
 }
 
+@media (min-width:0px) and (max-width:1028px) {
+    .map{
+        height: 50px;
+        background-color: white;
+        -webkit-box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+        box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
+    }
+
+    .mid-right{
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .mid-links{
+        margin-top: 15px;
+        margin-right: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+ 
+    .map .left-logo{
+        height: 50px;
+        padding: 15px;
+    }
+
+    .toggle-icon{
+        height: 50px;
+        padding-top: 10px;
+    }
+}
+
 @media (min-width:0px) and (max-width:780px) {
     .left-logo{
         width: fit-content;
@@ -164,13 +195,6 @@
 
     .left-logo span{
         display: none;
-    }
-
-    .map{
-        height: 50px;
-        background-color: white;
-        -webkit-box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
-        box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
     }
 
     .map .nav-brand{
@@ -190,10 +214,9 @@
     }
  
     .map .left-logo{
-        height: 50px;
-        width: 10%;
-        padding: 10px 0;
         border-right: 1px solid #dadae3;
+        width: 10%;
+        padding: 10px 0px;
     }
 
     .toggle-home{
@@ -206,11 +229,6 @@
 
     .mid-right{
         width: 90%;
-    }
-
-    .toggle-icon{
-        height: 50px;
-        padding-top: 10px;
     }
 }
 

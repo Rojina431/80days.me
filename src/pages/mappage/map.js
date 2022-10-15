@@ -45,7 +45,7 @@ const MapComponent = (props) => {
         longitude={props.from.center[0]}
         latitude = {props.from.center[1]}
         >
-          <div className='custom-btn' style={{color:Colors[0]}}><MdOutlineLocationOn size={20}/>
+          <div className='custom-btn' style={{backgroundColor:Colors[0], color:"white"}}><MdOutlineLocationOn size={20}/>
           <div>
           <div>{props.from.place}</div>
           <div className='subtitle'>Start</div>
@@ -63,7 +63,7 @@ const MapComponent = (props) => {
          onClick={() => {
           props.handleRouteChange(route.place)
         }} 
-          className='custom-btn' style={{color:Colors[i + 1], cursor:"pointer"}}  
+          className='custom-btn' style={{backgroundColor:Colors[i + 1], cursor:"pointer", color:"white"}}  
           data-bs-toggle="modal" data-bs-target="#cityModal"><MdOutlineLocationOn size={20}/> <div>
           <div>{route.place}</div>
           <div className='subtitle'></div>
@@ -75,7 +75,7 @@ const MapComponent = (props) => {
         longitude={props.to.center[0]}
         latitude = {props.to.center[1]}
         >
-          <div className='custom-btn' style={{color:Colors[0], transform:"rotate(45deg)"}}><MdOutlineLocationOn size={20}/> <div>
+          <div className='custom-btn' style={{backgroundColor:Colors[0], color:"white", transform:"rotate(45deg)"}}><MdOutlineLocationOn size={20}/> <div>
           <div>{props.to.place}</div>
           <div className='subtitle'>Finish</div>
           </div>

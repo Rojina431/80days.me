@@ -88,6 +88,15 @@
   color: var(--green-color);
 }
 
+
+.blue-text{
+  color: var(--dark-blue-color);
+}
+
+.blue-text-hover:hover{
+  color: var(--dark-blue-color);
+}
+
 /**/
 .rel-position{
   position: relative;

@@ -63,17 +63,17 @@
     position: relative;
 }
 
-.map-left::before{
+/* .map-left::before{
     position: absolute;
     left:0;
     top: 50%;
     transform: translateY(-50%);
     content: "";
     width: 5px;
-    height: 20px;
+    height: 50%;
     background-color: var(--yellow-color);
     border-radius: 0px 6px 6px 0px;
-}
+} */
 
 .circle-path{
     width: 11px;
@@ -97,7 +97,7 @@
     transform: translateY(-50%);
     content: "";
     width: 5px;
-    height: 20px;
+    height: 50%;
     background-color: var(--yellow-color);
     border-radius: 6px 0 0px 6px;
 }
