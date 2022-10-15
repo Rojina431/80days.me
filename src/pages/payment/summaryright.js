@@ -1,7 +1,7 @@
 import { BsArrowRight } from "react-icons/bs"
-import { IoMdAirplane } from "react-icons/io"
 import '../../assets/styles/summary.css'
 
+//right container of summary box including date, route, airport, time and soon
 const SummaryRight = ({summary}) => {
     return (
       <div className="row summary-container">

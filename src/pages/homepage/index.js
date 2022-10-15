@@ -7,6 +7,8 @@ import BookingPopup from './bookingpopup'
 import { Navigate } from 'react-router-dom'
 import { addDays} from 'date-fns'
 
+// Home page with selecting cities
+
 const HomePage = () => {
 
    const [userVal, setUserVal] = useState("1")
@@ -27,46 +29,67 @@ const HomePage = () => {
        }
      ])
 
+
+     //toggle booking in navbar
    const handleBookingsModal = (value) => {
       setBookingsOpen(value)
    }
 
+   //toggle to map page on clicking button design adventure
+
    const redirectToMap = () => {
        setRedirect(true)
    }
+
+//change no of passengers
 
    const handleChange = (value) => {
       setUserVal(value)
       handleOpen(false)
     };
 
+   //toggle selection of no of psngr
     const handleOpen = (value) => {
       setOpen(value)
     }
+
+    //handle hegight of center cities selecting form
 
     const handleHeight = (value) => {
       setHeight(value)
     }
 
+    //take value of from field 
+
     const handleFrom = (value) => {
       setFrom(value)
   }
+
+  //take value of to field
 
   const handleTo = (value) => {
       setTo(value)
   }
 
+  //take value of around field
+
   const handleAround = (value) => {
       setAround(value)
   }
+
+  //take value of include field
 
   const handleInclude = (value) => {
      setInclude(value)
   }
 
+  //take value of excliude field
+
   const handleExclude = (value) => {
       setExclude(value)
   }
+
+  //take value of date field
 
   const handleDatePicker = (value) => {
    setState(value)
@@ -99,7 +122,7 @@ var stateToTransfer = {
                </div>
                <div className='user-select'>
                  <HiUser size={18}/>
-               <div style={{marginLeft:"4px"}}>
+               <div style={{marginLeft:"4px", cursor:"pointer"}}>
                   <div onClick={() => handleOpen(!open)} className="fontw-500 fonts-18">{userVal}</div>
                </div>
                </div>
@@ -120,7 +143,7 @@ var stateToTransfer = {
                   state={state} handleDate={handleDatePicker}
                   />
                   <div className='bottom-btn'>
-                  <button onClick={() => redirectToMap()} className='btn-green'>Design Adventure</button>
+                  <button onClick={() => redirectToMap()} className='btn-green blue-back'>Design Adventure</button>
                   </div>
                   </div>
               

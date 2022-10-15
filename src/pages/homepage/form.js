@@ -10,6 +10,8 @@ import {SelectPlace, SelectMultiplePlace} from "../../component/selectplace"
 import Dashed from '../../component/dashed'
 import DateRangeComp from './dateRange'
 
+//form to select to, from, include, eclude , date, around in home page
+
 const HomePageForm = (props) => {
 
     const [openDate, setOpenDate] = useState(false)

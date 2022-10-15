@@ -1,5 +1,6 @@
 import { CountryNames } from "../../assets/constants/places"
 
+//select component to select country
 export const SelectCountry = () => {
     return (
         <div className="custom-select login-select">

@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 import PaymentFormHeader from './formheader'
 import '../../assets/styles/psngr.css'
-import { ContryNames, CountryNames } from '../../assets/constants/places'
-import { SelectDays, SelectMonth } from '../../component/selectdays'
+
+//contact detail container of left component of payment page
 
 const ContactDetails = () => {
    return (
@@ -24,7 +24,7 @@ const ContactDetails = () => {
               </div>
               </div>
             </div>
-            <button className='btn-pay-green'>Continue To The Payment</button>
+            <button className='btn-pay-blue'>Continue To The Payment</button>
         </div>  
       </Fragment>
    )

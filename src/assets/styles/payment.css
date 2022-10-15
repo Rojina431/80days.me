@@ -5,7 +5,8 @@
 
 .route-line{
     margin: 0 70px 40px;
-    font-size: 20px;
+    font-size: 30px;
+    color: var(--red-color);
 }
 
 .pay-body{
@@ -29,23 +30,26 @@
 }
 
 .payment-form{
-    border: 1px solid var(--grey-color);
+    /* border: 1px solid var(--grey-color); */
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 15%);
     border-radius: 8px;
     margin:0 10px;
 }
 
-.header-outer, .head-outer-first{
-    margin: 10px 0;
+.head-outer, .head-outer-first{
+    background-color: var(--grey-next);
 }
 
 .head-outer{
-  border-bottom: 1px solid var(--grey-color);
-  border-top: 1px solid var(--grey-color);
+  margin: 10px 0;
 }
 
 .head-outer-first{
-    border-bottom: 1px solid var(--grey-color);
+    margin: 0px;
+    
     padding: 0px !important;
+    padding-top: 10px !important;
+    border-radius: 8px 8px 0 0px;
 }
 
 .head-inner{
@@ -71,7 +75,7 @@
     width: 30px;
     height: 30px;
     line-height: 28px;
-    background-color: black;
+    background-color: var(--grey-color);
     color: var(--white-color);
     margin-right: 10px;
     text-align: center;
@@ -99,6 +103,12 @@
 
 .form-cont .form-control{
     font-size: 14px !important;
+}
+
+.pay-body .form-control, .pay-body .form-select, .pay-body .input-group-text{
+ background-color: var(--grey-fourth);
+ -webkit-box-shadow: 0 4px 20px 0 rgb(0 0 0 / 5%);
+    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 5%);
 }
 
 .phone{

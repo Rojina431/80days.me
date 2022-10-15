@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import Map, { FullscreenControl, Layer, Marker, Source } from 'react-map-gl';
+import Map, { Layer, Marker, Source } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css'
-import bag from '../../assets/images/bag.png'
 import { Colors } from '../../assets/constants/adventuredetails';
 import { MdOutlineLocationOn } from 'react-icons/md';
 
+
+//utilizing mapbox
 const MapComponent = (props) => {
 
   const [coord, setcoord] = useState([])

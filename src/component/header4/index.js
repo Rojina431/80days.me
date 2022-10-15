@@ -10,6 +10,8 @@ import useWindowsDimensions from '../windowdimension'
 import { Link } from 'react-router-dom'
 import LeftLogComp from '../leftlogo'
 
+
+//header for map page
 const HeaderMap = (props) => {
 
   const [isLogged, setIsLogged] = useState(false) 
@@ -37,7 +39,7 @@ const HeaderMap = (props) => {
       <div className='mid-right'>
       <div className='mid-links'>
         {props.shuffleCity.map((city, i) => {
-          return <div key={i} className='route-type' style={{borderBottom: `${props.cityNo === city ? "2px solid black" : "0px"} `}}
+          return <div key={i} className='route-type' style={{borderBottom: `${props.cityNo === city ? "2.5px solid black" : "0px"} `}}
            onClick={() => props.handleChange(city)}>{city} <span className='route-city'>Cities</span></div>
         })}
       </div>
@@ -52,11 +54,11 @@ const HeaderMap = (props) => {
            <a href="#" className=' fonts-14 fontw-500 lineh-34 black-text each-links-text'>Save</a>
         </div>
         <div className='no-underline each-links lineh-78' data-bs-toggle="modal" data-bs-target="#shareModal">
-           <span style={{cursor:"pointer"}} className=' fonts-14 fontw-500 lineh-34 black-text each-links-text'>Share</span>
+           <span className=' fonts-14 fontw-500 lineh-34 black-text each-links-text'>Share</span>
         </div>
-        {!isLogged ? <div className='fonts-14 fontw-500 lineh-78 black-text each-links each-links-text'>
+        {!isLogged ? <Link to="/login/" style={{textDecoration:"none"}}><div className='fonts-14 fontw-500 lineh-78 black-text each-links each-links-text'>
           <span className='each-links-text'>Log In</span>
-        </div> :
+        </div></Link> :
         <div className='circle each-links lineh-78 fontw-500' style={{backgroundColor:"rgb(128, 76, 180)"}}>
           <span>N</span>
         </div>}
@@ -69,11 +71,12 @@ const HeaderMap = (props) => {
       </div>
     </div>
     {isClicked && <div className="right-links" style={{
-        position:"static",
-        zIndex:"2", paddingTop:"10px", 
-        width:"100vw", 
-        display:"block", height:"100vh", 
-        backgroundColor:"white"}}>
+        backgroundColor:"#ededed",
+        zIndex:"6", paddingTop:"80px",
+        paddingLeft:"50px",
+        marginRight:"-20px",
+        width:"100%", 
+        display:"block", height:"100vh", marginTop:"80px" }}>
         <div className='global-logo lineh-78' style={{marginLeft:"20px"}}>
           <TbWorld size={20} className='fontw-300' />{'  '}<IoIosArrowDown size={15} className='fontw-600' />
         </div>
@@ -83,12 +86,12 @@ const HeaderMap = (props) => {
         <div className='no-underline each-links lineh-78'>
            <a href="#" className=' fonts-14 fontw-500 lineh-34 black-text '>Save</a>
         </div>
-        <div className='no-underline each-links lineh-78'>
+        <div className='no-underline each-links lineh-78' data-bs-toggle="modal" data-bs-target="#shareModal">
            <a href="#" className=' fonts-14 fontw-500 lineh-34 black-text'>Share</a>
         </div>
-        {!isLogged ? <div className='fonts-14 fontw-500 lineh-78 black-text each-links'>
+        {!isLogged ? <Link to="/login/" style={{textDecoration:"none"}}><div className='fonts-14 fontw-500 lineh-78 black-text each-links'>
           <span>Log In</span>
-        </div> :
+        </div></Link> :
         <div className='circle each-links lineh-78 fontw-500' style={{backgroundColor:"rgb(128, 76, 180)"}}>
           <span>N</span>
         </div>}

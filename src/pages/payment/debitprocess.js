@@ -2,6 +2,8 @@ import { Fragment } from 'react'
 import { ContryNames } from '../../assets/constants/places'
 import { HiCreditCard } from 'react-icons/hi'
 
+
+//debit process container
 const DebitProcess = () => {
     return (
         <Fragment>

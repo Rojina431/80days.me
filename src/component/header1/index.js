@@ -29,7 +29,7 @@ const HeaderHome = (props) => {
           <span className='each-links-text'>My Bookings</span>
         </div>
         
-        <div style={{cursor:"pointer"}} className='fonts-14 fontw-500 lineh-78 black-text each-links each-links-text'>
+        <div className='fonts-14 fontw-500 lineh-78 black-text each-links each-links-text'>
         {!isLogged ? <Link to="/login/" style={{textDecoration:"none"}}><span className='each-links-text black-text'>Log In</span></Link>
          : <span className='each-links-text'>Log Out</span>}  
         </div>

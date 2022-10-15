@@ -9,6 +9,8 @@ import checkIcon from '../../assets/images/check-icon.svg'
 import TooltipComponent from '../../component/tooltipcomp'
 import { Link } from 'react-router-dom'
 
+
+//right container of map page including price
 const RightBottomContainer = () => {
 
     const [isCalc, setIsCalc] = useState(true)
@@ -138,7 +140,7 @@ const RightBottomContainer = () => {
             </div> </Fragment> : <div className='long-para'>One of the carriers couldn’t confirm the availability of the tickets. Please, change parameters to create a trip</div>}
             <div className="btn-signup-login">
                 {isCalc ? <Link to="/payment/">
-                    <button className='btn-green'>Continue</button>
+                    <button className='btn-green blue-back'>Continue</button>
                 </Link> :
                 <button className='btn-green' style={{backgroundColor:"#788a86"}}>Try Again</button>}
             </div>

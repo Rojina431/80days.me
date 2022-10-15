@@ -1,11 +1,11 @@
 
 
 .summary-container{
-    background-color: var(--white-color);
+    background-color: var(--grey-next);
     display: flex;
     border-radius: 10px;
-    -webkit-box-shadow: 0 4px 20px 0 rgb(0 0 0 / 10%);
-    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0 4px 20px 0 rgb(0 0 0 / 5%);
+    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 5%);
 }
 
 /*left*/
@@ -33,6 +33,18 @@
 /*left of summary-right*/
 .summary-left-cont{
     padding:7px 0 0 20px;
+    position: relative;
+}
+
+.summary-left-cont::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background-color: var(--yellow-color);
+    left: 0;
+    top: 49px;
+    border-radius: 0px 6px 6px 0px;
 }
 
 .summary-date{
@@ -80,7 +92,7 @@
     font-size: 10px;
     font-weight: 500;
     color: var(--grey-color);
-    border-bottom: 1px solid var(--grey-color);
+    border-bottom: 1px solid var(--yellow-color);
     margin-left: -25px;
     margin-right: 25px;
     margin-top: 35px;
@@ -96,7 +108,7 @@
     content: "";
     width: 6px;
     height: 0;
-    border-top: 1px solid #b6b6bc;
+    border-top: 1px solid var(--yellow-color);
     margin-right: 22px;
     right: 0;
     bottom:18px;
@@ -125,10 +137,10 @@
     position: absolute;
     width: 5px;
     height: 20px;
-    background-color: rgba(0,0,0,.09);
+    background-color: var(--yellow-color);
     right: 0;
     top: 49px;
-    border-radius: 3px 0 0 3px;
+    border-radius: 6px 0 0 6px;
 }
 
 .airplane-icon{
@@ -162,6 +174,7 @@
     font-size: 30px;
     text-transform: uppercase;
     line-height: 1.03;
+    /* color: var(--dark-blue-color); */
 }
 
 .stay{

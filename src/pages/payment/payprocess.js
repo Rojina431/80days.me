@@ -12,6 +12,8 @@ import '../../assets/styles/payprocess.css'
 import DebitProcess from './debitprocess'
 import Paypal from './paypalprocess'
 
+//payment container of left container of payment page
+
 const PayProcess = () => {
 
     const [isDebit, setIsDebit] = useState(true)
@@ -68,7 +70,7 @@ const PayProcess = () => {
                 I accept the <a href='#' style={{color:"#999"}}>Terms and Conditions</a> of Eightydays.me and agree with Eightydays.me's immediate performance of services. I also acknowledge that I cannot withdraw from Eightydays.me's service agreement.
                 </label>
                </div>
-               <button className='btn-pay-green mt-3 mb-3'>Pay Now</button>
+               <button className='btn-pay-blue mt-3 mb-3'>Pay Now</button>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+
+//popup to be appeared when share of navbar clicked
 const SharepopupComponent = () => {
 
     const [isCopied, setIsCopied] = useState(false)

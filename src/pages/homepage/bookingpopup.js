@@ -4,7 +4,9 @@ import '../../assets/styles/bookings.css'
 import HistoryContainer from './historycontainer'
 import SavedContainer from './savedcontainer'
 
-const BookingPopup = (props) => {
+
+//modal to view when my bookings is clicked
+const BookingPopup = () => {
 
     const BookedDate = ({date}) => {
         return (

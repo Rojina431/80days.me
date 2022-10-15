@@ -4,6 +4,7 @@ import { BookedAdventureDetails, Colors } from '../../assets/constants/adventure
 import PaymentFormHeader from './formheader'
 import SummaryRight from './summaryright'
 
+//summary container
 const TripSummary = () => {
     return (
         <Fragment>

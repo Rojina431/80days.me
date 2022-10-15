@@ -1,10 +1,11 @@
-import { useState } from 'react'
 import {TbWorld} from 'react-icons/tb'
 import { IoIosArrowDown } from 'react-icons/io'
 import '../../assets/styles/common.css'
 import '../../assets/styles/navbar.css'
 import LeftLogComp from '../leftlogo'
 
+
+//login page header
 const HeaderLoginSignup = (props) => {
 
 

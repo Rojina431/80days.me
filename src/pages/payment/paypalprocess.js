@@ -1,5 +1,7 @@
 import { Fragment } from 'react'
 
+
+//paypal process container
 const Paypal = () => {
     return (
         <Fragment>

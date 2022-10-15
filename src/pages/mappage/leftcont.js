@@ -2,6 +2,8 @@ import { Fragment } from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import '../../assets/styles/map.css'
 
+
+//left each container of map page including time, airport name, air name and so on
 const LeftContainer = ({ summary, color, i }) => {
     return (
         <Fragment>
@@ -56,7 +58,8 @@ const LeftContainer = ({ summary, color, i }) => {
             </div>
             <div  className='hotels'>
                         <span style={{marginRight:"8px"}} className="badge rounded-pill text-bg-success">Airbnb</span>
-                        <span className="badge rounded-pill text-bg-warning">Hotels</span>
+                        <span style={{marginRight:"8px"}} className="badge rounded-pill text-bg-warning">Hotels</span>
+                        <span className="badge rounded-pill text-bg-primary">Instagram</span>
             </div>
         </Fragment>
     )

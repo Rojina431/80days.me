@@ -1,6 +1,8 @@
 import { Fragment } from 'react'
 import '../../assets/styles/totalpay.css'
 
+//right sticky component of payment page
+
 const TotalPaymentComp = (props) => {
     return (
       <div className="total-payment-comp">

@@ -149,7 +149,7 @@
 }
 
 .chat-btn{
-    background-color: rgb(84, 98, 112);
+    background-color: var(--grey-next);
     border-radius: 50%;
     width: 60px;
     height: 60px;

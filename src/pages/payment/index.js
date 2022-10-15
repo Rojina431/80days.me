@@ -9,6 +9,8 @@ import PessengerInfo from './psngrdetail'
 import TripSummary from './summary'
 import TotalPaymentComp from './totalpayment'
 
+
+//payment display page
 const PaymentPage = () => {
 
     const [firstCheck, setFirstCheck] = useState(false)
@@ -36,7 +38,9 @@ const PaymentPage = () => {
                 <span>{BookedAdventureDetails[0].fromCity}</span>
             </h4>
            </div>
+           {/* right part of payment page including summary, psngr details */}
            <div className='pay-body'>
+            
                <div className='payment-form'>
                  <TripSummary/>
                  <PessengerInfo handleChange={handleChange}/>

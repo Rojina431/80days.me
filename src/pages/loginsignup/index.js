@@ -5,9 +5,13 @@ import '../../assets/styles/loginsignup.css'
 import SignUpContainer from './signup'
 import LoginContainer from './login'
 
+//loginpage
 const LoginSignUp = () => {
 
     const [isLogin, setIsLogin] = useState(true)
+
+
+    //toggle between login and signup
 
     const handleToggle = (login) => {
        var loginelem = document.getElementById("#login")

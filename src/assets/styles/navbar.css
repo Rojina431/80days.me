@@ -14,7 +14,6 @@
     position: fixed;
     top:0;
     width: 100%;
-    z-index: 2999;
 }
 
 .navbar-fixed-active{
@@ -213,6 +212,10 @@
         height: 50px;
         padding-top: 10px;
     }
+}
+
+.each-links{
+    cursor: pointer;
 }
 
 @media (min-width:0px) and (max-width:710px) {

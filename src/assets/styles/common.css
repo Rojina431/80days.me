@@ -38,6 +38,14 @@
     border: 0px;
 }
 
+.yellow-back{
+    background-color: var(--yellow-color);
+}
+
+.blue-back{
+    background-color: var(--dark-blue-color) !important;
+}
+
 .no-underline>a{
     text-decoration: none !important;
 }
@@ -51,8 +59,9 @@ a{
     height: 1.6em;
 }
 
+/* check box*/
 .form-check-input:checked{
-    background-color: var(--green-color);
+    background-color: var(--dark-blue-color);
     border: 0px;
 }
 
@@ -123,12 +132,13 @@ padding: 0px;
     padding-top:5px;
 }
 
+/* react-select selectd option */
 .css-1hb7zxy-IndicatorsContainer{
     display: none !important;
 }
 
 .include .css-1rhbuit-multiValue{
-    background-color: var(--green-color) !important;
+    background-color: var(--dark-blue-color) !important;
     color: var(--white-color) !important;
 }
 

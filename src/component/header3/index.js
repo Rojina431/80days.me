@@ -5,7 +5,9 @@ import '../../assets/styles/common.css'
 import '../../assets/styles/navbar.css'
 import LeftLogComp from '../leftlogo'
 
-const HeaderPayment = (props) => {
+
+//header for payment page
+const HeaderPayment = () => {
 
   useEffect(()=> {
     var elem = document.querySelector('.navbar-fixed')

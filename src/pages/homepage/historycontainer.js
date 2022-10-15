@@ -2,6 +2,8 @@ import { Fragment } from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import Dashed from "../../component/dashed"
 
+//history tab of my bookings modal
+
 const HistoryContainer = ({history}) => {
     return (
       <div className="booking-main">
@@ -14,7 +16,7 @@ const HistoryContainer = ({history}) => {
            <div className='col-4 btn-booked' style={{borderLeft:"1px dashed #ededed"}}>
               
            <div className='left-history'>
-              <button className='open-btn'>Open</button> 
+              <button className='open-btn blue-back'>Open</button> 
               </div>   
            </div>
         </div>

@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+//header of each component summary, psngr detail, payment form
 
 const PaymentFormHeader = (props) => {
     return(

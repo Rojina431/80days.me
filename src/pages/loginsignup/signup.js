@@ -1,5 +1,7 @@
 import { SelectCountry } from "./selectcountry"
 
+
+//signup conatiner
 const SignUpContainer = () => {
     return (
        <div className="main-container">
@@ -21,7 +23,7 @@ const SignUpContainer = () => {
            </div>
         </div>
         <div className="btn-signup-login">
-         <button className='btn-green'>Sign up</button>
+         <button className='btn-green blue-back'>Sign up</button>
          </div>
          <div className="footer-login">
             <div className="agreement">

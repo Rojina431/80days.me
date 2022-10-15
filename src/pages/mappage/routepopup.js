@@ -3,6 +3,8 @@ import { IoIosAirplane, IoMdAirplane } from 'react-icons/io'
 import { FcCheckmark } from 'react-icons/fc'
 import { CountryNames } from '../../assets/constants/places'
 
+
+//pop up component appears when right container including route, time, airport name is clicked
 const RoutepopupComponent = (props) => {
 
     const [selected, setSelected] = useState(props.route)

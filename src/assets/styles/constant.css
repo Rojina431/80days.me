@@ -4,6 +4,7 @@
     --purple-color:rgb(128, 76, 180);
     --white-color:#fff;
     --blue-color: #1890ff;
+    --dark-blue-color:rgb(90, 136, 208);
     --green-color: #4bd963;
     --light-green-color: #74e787;
     --parrot-color: rgb(159, 180, 20);
@@ -13,4 +14,6 @@
     --grey-fourth: #ededed;
     --grey-fifth: #ccc;
     --grey-sixth: #f3f3f3;
+    --red-color:rgb(208, 2, 27);
+    --yellow-color:rgb(249, 201, 35);
 }

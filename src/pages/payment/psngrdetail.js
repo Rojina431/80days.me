@@ -1,7 +1,7 @@
 import { Fragment, useState, useEffect } from 'react'
 import PaymentFormHeader from './formheader'
 import '../../assets/styles/psngr.css'
-import { ContryNames, CountryNames } from '../../assets/constants/places'
+import { ContryNames } from '../../assets/constants/places'
 import { SelectDays, SelectMonth } from '../../component/selectdays'
 import PopoverButton from './popover'
 import { BsCheck2 } from 'react-icons/bs'
@@ -9,6 +9,8 @@ import bag from '../../assets/images/bag.png'
 import luggage from '../../assets/images/luggage.png'
 import trolly from '../../assets/images/trolly.png'
 import { GoPlus } from 'react-icons/go'
+
+//psngr detail component of left part of payment page
 
 const PessengerInfo = (props) => {
 

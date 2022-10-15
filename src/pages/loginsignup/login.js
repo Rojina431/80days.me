@@ -1,3 +1,5 @@
+
+//login container
 const LoginContainer = () => {
     return (
        <div className="main-container">
@@ -10,11 +12,11 @@ const LoginContainer = () => {
            </div>
         </div>
         <div className="btn-signup-login">
-         <button className='btn-green'>Log in</button>
+         <button className='btn-green blue-back'>Log in</button>
          </div>
          <div style={{textAlign:"center", fontWeight:"bold"}} className="fonts-14">or</div>
          <div className="btn-signup-login">
-         <button className='btn-green' style={{backgroundColor:"#334f8d"}}>Log in with facebook</button>
+         <button className='btn-green'>Log in with facebook</button>
          </div>
          <div className="btn-signup-login">
          <button className='btn-green' style={{backgroundColor:"#d55348"}}>Log in with google</button>

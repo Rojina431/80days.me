@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import { BsArrowRight } from 'react-icons/bs'
-import Dashed from "../../component/dashed"
+
+//saved tab of my bookings modal
 
 const SavedContainer = ({saved}) => {
     return (
@@ -25,7 +26,7 @@ const SavedContainer = ({saved}) => {
             
            <div className='left-history'>
               <div className='price'>{saved.price}</div>
-              <button className='open-btn mt-2 mb-4'>Open</button>
+              <button className='open-btn mt-2 mb-4 blue-back'>Open</button>
            </div>
            </div>
         </div>

@@ -4,6 +4,8 @@ import { FcCheckmark } from 'react-icons/fc'
 import { CountryNames } from '../../assets/constants/places'
 import flag from '../../assets/images/flag.svg'
 
+
+//popup to be appeared when each route is clicked
 const CitypopupComponent = (props) => {
 
     const [selected, setSelected] = useState(props.route)

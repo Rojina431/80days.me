@@ -2,8 +2,8 @@
     border-radius: 8px;
     padding: 20px;
     padding-bottom: 13px;
-    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 5%);
-    background-color: var(--white-color);
+    box-shadow: 0 8px 20px 0 rgb(0 0 0 / 15%);
+    background-color: var(--grey-fourth);
     margin-bottom: 20px;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .pay-foot3{
-    color: #4cd964;
+    color: var(--dark-blue-color);
 }
 
 .pay-text4{
@@ -84,6 +84,6 @@
     margin-block-start: 1em;
     margin-block-end: 1em;
     font-size: 14px;
-    color: #3bd963;
+    color: var(--dark-blue-color);
     font-weight: 400;
 }
