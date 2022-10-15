@@ -31,7 +31,7 @@ const LeftWhole = () => {
             }
             <div>
                 <div className='date-container' style={{ zIndex: 2 }}>
-                    <div className='circle-path' style={{ border: `3.5px solid ${Colors[0]}` }}></div>
+                    <div className='circle-path' style={{ backgroundColor: `${Colors[0]}` }}></div>
                     <div className='place-det'>
                         <div className='stay stay-map'>
                         {`Fininsh / ${BookedAdventureDetails[BookedAdventureDetails.length -1].endDate}`}

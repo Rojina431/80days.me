@@ -58,7 +58,9 @@ const LeftContainer = ({ summary, color, time, date }) => {
                             </div>
                         </div>
                     </div>
-                   
+                   <div>
+                    
+                   </div>
                 </div>
             </div>
             <div  className='hotels'>

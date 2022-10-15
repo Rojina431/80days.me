@@ -28,7 +28,7 @@
 }
 
 .hotels{
-    margin-left: 33%;
+    margin-left: 31%;
 }
 
 .st-path{
@@ -37,7 +37,7 @@
     height: 270px;
     position: absolute;
     margin-top: 61px;
-    left: 17%;
+    left: 13.5%;
     z-index: 1;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .map-left{
-    width:30%;
+    width:20%;
     border-right: 1px dashed #ebebee;
     text-align: center;
     position: relative;
@@ -65,15 +65,16 @@
 
 
 .circle-path{
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    margin-left: 13.8%;
+    margin-left: 10%;
     margin-top: 60px;
+    border: 1px solid white;
 }
 
 .map-right{
-    width: 60%;
+    width: 70%;
     cursor: pointer;
     position: relative;
     background-color: var(--white-color);
@@ -370,31 +371,31 @@
 
 @media (min-width:900px) and (max-width:1128px) {
    .st-path{
-    left: 18%;
+    left: 15%;
    }
 }
 
 @media (min-width:728px) and (max-width:900px) {
     .st-path{
-     left: 19%;
+     left: 16%;
     }
  }
 
- @media (min-width:600px) and (max-width:718px) {
+ @media (min-width:600px) and (max-width:728px) {
     .st-path{
-        left: 17.5%;
+        left: 15%;
     }
  }
 
  @media (min-width:400px) and (max-width:600px) {
     .st-path{
-        left: 18.3%;
+        left: 15%;
     }
  }
 
  @media (min-width:0px) and (max-width:400px) {
     .st-path{
-        left: 20.5%;
+        left: 15%;
     }
  }
 
@@ -412,10 +413,6 @@
  }
 
 @media (min-width:0px) and (max-width:750px) {
-
-    .left-whole{
-        width: 80%;
-    }
 
     .map-container, .date-container{
         width: 100%;
